@@ -1,2 +1,2 @@
-speed = 25;
+speed = 20;
 direction = obj_player.image_angle;
