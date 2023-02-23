@@ -16,11 +16,16 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"Sprite7","order":25,"path":"sprites/Sprite7/Sprite7.yy",},
     {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
     {"name":"spr_rock_big","order":2,"path":"sprites/spr_rock_big/spr_rock_big.yy",},
+    {"name":"Sprite5","order":23,"path":"sprites/Sprite5/Sprite5.yy",},
+    {"name":"Sprite8","order":26,"path":"sprites/Sprite8/Sprite8.yy",},
     {"name":"obj_bullet","order":1,"path":"objects/obj_bullet/obj_bullet.yy",},
+    {"name":"Sprite6","order":24,"path":"sprites/Sprite6/Sprite6.yy",},
     {"name":"obj_rock","order":2,"path":"objects/obj_rock/obj_rock.yy",},
     {"name":"obj_game","order":3,"path":"objects/obj_game/obj_game.yy",},
+    {"name":"Sprite9","order":27,"path":"sprites/Sprite9/Sprite9.yy",},
     {"name":"spr_rock_small","order":3,"path":"sprites/spr_rock_small/spr_rock_small.yy",},
   ],
 }
