@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite7",
-    "path": "sprites/Sprite7/Sprite7.yy",
+    "name": "XWing",
+    "path": "sprites/XWing/XWing.yy",
   },
   "spriteMaskId": null,
   "visible": true,
