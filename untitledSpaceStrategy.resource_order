@@ -18,6 +18,7 @@
   "ResourceOrderSettings": [
     {"name":"XWing","order":4,"path":"sprites/XWing/XWing.yy",},
     {"name":"spr_rock_big","order":2,"path":"sprites/spr_rock_big/spr_rock_big.yy",},
+    {"name":"StarryBackground","order":1,"path":"sprites/StarryBackground/StarryBackground.yy",},
     {"name":"RockExample","order":5,"path":"sprites/RockExample/RockExample.yy",},
     {"name":"obj_bullet","order":1,"path":"objects/obj_bullet/obj_bullet.yy",},
     {"name":"obj_rock","order":2,"path":"objects/obj_rock/obj_rock.yy",},

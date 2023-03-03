@@ -34,6 +34,7 @@
   "resources": [
     {"id":{"name":"XWing","path":"sprites/XWing/XWing.yy",},"order":4,},
     {"id":{"name":"spr_rock_big","path":"sprites/spr_rock_big/spr_rock_big.yy",},"order":2,},
+    {"id":{"name":"StarryBackground","path":"sprites/StarryBackground/StarryBackground.yy",},"order":1,},
     {"id":{"name":"RockExample","path":"sprites/RockExample/RockExample.yy",},"order":5,},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},"order":1,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
