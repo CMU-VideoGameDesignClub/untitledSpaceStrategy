@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "bolt1",
-    "path": "sprites/bolt1/bolt1.yy",
+    "name": "enemy_blast_sprite",
+    "path": "sprites/enemy_blast_sprite/enemy_blast_sprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,

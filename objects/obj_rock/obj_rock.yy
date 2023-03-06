@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "RockExample",
-    "path": "sprites/RockExample/RockExample.yy",
+    "name": "spr_rock_big",
+    "path": "sprites/spr_rock_big/spr_rock_big.yy",
   },
   "spriteMaskId": null,
   "visible": true,
