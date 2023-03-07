@@ -2,7 +2,7 @@ move_wrap(true, true, 100);
 image_angle +=.35;
 
 // checks distance from player before attacking
-if distance_to_object(obj_player) <= 750 {
+if distance_to_object(obj_player) <= 500 {
 
 	// first turret
 	if(shootCoolDown1 <= 0){	
@@ -63,4 +63,21 @@ if distance_to_object(obj_player) <= 750 {
 		shootCoolDown4 = (0.25*room_speed);
 	}
 		shootCoolDown4 -= .5 + random(1);
+}
+
+if distance_to_object(obj_player) <= 3000 {
+
+	// enemy hanger
+	if(enemyHangerSpawn1 <= 0){	
+		var ex, ey;
+		ex = instance_nearest(x, y, obj_player).x;
+		ey = instance_nearest(x, y, obj_player).y;
+
+		with (instance_create_layer(x, y, "Instances", enemy_fighter)){
+		    direction = point_direction(x, y, ex, ey);
+			image_angle = direction;
+		}
+		enemyHangerSpawn1 = (1*room_speed);
+	}
+		enemyHangerSpawn1 -= .1;
 }

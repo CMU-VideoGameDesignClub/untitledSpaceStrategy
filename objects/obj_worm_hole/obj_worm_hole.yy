@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "PlanetX",
+  "name": "obj_worm_hole",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_planet_x",
-    "path": "sprites/spr_planet_x/spr_planet_x.yy",
+    "name": "spr_worm_hole",
+    "path": "sprites/spr_worm_hole/spr_worm_hole.yy",
   },
   "spriteMaskId": null,
   "visible": true,

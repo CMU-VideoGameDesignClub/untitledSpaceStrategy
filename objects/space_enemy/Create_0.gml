@@ -5,3 +5,4 @@ shootCoolDown1 = 0;
 shootCoolDown2 = -1;
 shootCoolDown3 = -2;
 shootCoolDown4 = -3;
+enemyHangerSpawn1 = -4;

@@ -2,6 +2,7 @@ if(!shieldUp){
 	effect_create_above(ef_explosion, x, y, 1, c_orange);
 	audio_play_sound(Explosion1, 2, false);
 	obj_game.alarm[0] = 100;
+	instance_create_layer(0, 0, "Instances", obj_player_defeat_transition);
 	instance_destroy(true);
 }
 else {
