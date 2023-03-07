@@ -5,7 +5,7 @@ currentSpawnPointX = GroundGeneration.x
 heightVariation = 1//irandom_range(-1,1)
 previousCollumHeight = 0
 //x = irandom_range(64,512)
-x = irandom_range(1,10)
+x = irandom_range(5,10)
 
 //test[x]
 while(x>0)
@@ -14,22 +14,22 @@ while(x>0)
 	instance_create_layer(currentSpawnPointX, GroundGeneration.y, "Instances", obj_block_brick)
 //	temp = 128
 	//sets current collum height
-//	currentCollumHieght = irandom_range(-1, 1) //previousCollumHeight + irandom_range(-heightVariation, heightVariation)
+	currentCollumHieght = irandom_range(-1, 1) //previousCollumHeight + irandom_range(-heightVariation, heightVariation)
 	//creating a maniputation variable
-//	if(currentCollumHieght <=0)
-//	{
-//		currentCollumHieght = 1
-//	}
-	y = 1
-	while(y<=1)//currentCollumHieght)
+	if(currentCollumHieght <=0)
 	{
-		instance_create_layer(currentSpawnPointX, GroundGeneration.y + 128, "Instances", obj_block_brick)
+		currentCollumHieght = 1
+	}
+	y = 1
+	while(y<=currentCollumHieght)
+	{
+		instance_create_layer(currentSpawnPointX, GroundGeneration.y / 100, "Instances", obj_block_brick)
 //		temp += 128
 		y++
 	}
 	
 	//makes this collum height the previous collum height for future refrence
-//	previousCollumHeight = currentCollumHieght
+	previousCollumHeight = currentCollumHieght
 	currentSpawnPointX += 128
 	x--
 }
