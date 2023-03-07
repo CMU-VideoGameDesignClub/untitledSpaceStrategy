@@ -1,21 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-if keyboard_check(vk_up)
-{
-	 motion_add(image_angle, .1);
-}
-if keyboard_check(vk_left)
-{
-	 image_angle +=4;
-}
-if keyboard_check(vk_right)
-{
-	 image_angle -=4;
-}
+event_inherited();
 
-move_wrap(true, true, 0)
-
-if keyboard_check(vk_space)
-{
-	instance_create_layer(x, y, "Instances", obj_bullet)	
-}
+// Set the position of the default audio listener to the player's position, for positional audio
+// with audio emitters (such as in obj_end_gate)
+audio_listener_set_position(0, x, y, 0);
