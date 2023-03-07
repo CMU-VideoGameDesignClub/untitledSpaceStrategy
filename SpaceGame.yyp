@@ -103,6 +103,7 @@
     {"id":{"name":"spr_game_over","path":"sprites/spr_game_over/spr_game_over.yy",},"order":5,},
     {"id":{"name":"spr_coin","path":"sprites/spr_coin/spr_coin.yy",},"order":0,},
     {"id":{"name":"spr_hud_heart_full","path":"sprites/spr_hud_heart_full/spr_hud_heart_full.yy",},"order":1,},
+    {"id":{"name":"GroundGeneration","path":"objects/GroundGeneration/GroundGeneration.yy",},"order":0,},
     {"id":{"name":"obj_effect_walk","path":"objects/obj_effect_walk/obj_effect_walk.yy",},"order":4,},
     {"id":{"name":"spr_mushroom_group_2","path":"sprites/spr_mushroom_group_2/spr_mushroom_group_2.yy",},"order":10,},
     {"id":{"name":"spr_hanging_group_3","path":"sprites/spr_hanging_group_3/spr_hanging_group_3.yy",},"order":5,},
@@ -245,11 +246,11 @@
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},"order":0,},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"planetGround","path":"rooms/planetGround/planetGround.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"roomId":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
-    {"roomId":{"name":"planetGround","path":"rooms/planetGround/planetGround.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
