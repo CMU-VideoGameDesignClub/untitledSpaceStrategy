@@ -19,6 +19,7 @@ while(xManip>0)
 	{
 		currentCollumHieght += baseOffset;
 	}
+	
 	if(currentCollumHieght <=0)
 	{
 		currentCollumHieght = 1
