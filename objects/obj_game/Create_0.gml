@@ -15,7 +15,7 @@ view_yport[0] = 0;
 view_wport[0] = displayX
 view_hport[0] = displayY
 	
-view_camera[0] = camera_create_view(0, 0, view_wport[0], view_hport[0], 0, obj_player, -1, -1, displayX, displayY);
+view_camera[0] = camera_create_view(0, 0, view_wport[0], view_hport[0], 0, obj_player_space, -1, -1, displayX, displayY);
 
 var _dwidth = display_get_width();
 var _dheight = display_get_height();

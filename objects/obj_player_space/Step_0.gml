@@ -12,8 +12,8 @@ if keyboard_check(vk_up)
 }
 if keyboard_check(vk_down)
 {
-	if(obj_player.speed > 0){
-		obj_player.speed -= .25;
+	if(obj_player_space.speed > 0){
+		obj_player_space.speed -= .25;
 	}
 }
 if keyboard_check(vk_left)
@@ -31,4 +31,4 @@ if keyboard_check_pressed(vk_space)
 	instance_create_layer(x+10, y+10, "Instances", obj_bullet)	
 }
 
-camera_set_view_size(view_camera[0], displayX + (obj_player.speed*obj_player.speed)*1.6, displayY + (obj_player.speed*obj_player.speed)*.9);
+camera_set_view_size(view_camera[0], displayX + (obj_player_space.speed*obj_player_space.speed)*1.6, displayY + (obj_player_space.speed*obj_player_space.speed)*.9);

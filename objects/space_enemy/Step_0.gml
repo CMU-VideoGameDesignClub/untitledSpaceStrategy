@@ -2,13 +2,13 @@ move_wrap(true, true, 100);
 image_angle +=.35;
 
 // checks distance from player before attacking
-if distance_to_object(obj_player) <= 500 {
+if distance_to_object(obj_player_space) <= 500 {
 
 	// first turret
 	if(shootCoolDown1 <= 0){	
 		var ex, ey;
-		ex = instance_nearest(x, y, obj_player).x;
-		ey = instance_nearest(x, y, obj_player).y;
+		ex = instance_nearest(x, y, obj_player_space).x;
+		ey = instance_nearest(x, y, obj_player_space).y;
 
 		with (instance_create_layer(x+75, y+75, "Instances", obj_enemy_blast)){
 			speed = 10 + random(15);
@@ -22,8 +22,8 @@ if distance_to_object(obj_player) <= 500 {
 	// second turret
 	if(shootCoolDown2 <= 0){	
 		var ex, ey;
-		ex = instance_nearest(x, y, obj_player).x;
-		ey = instance_nearest(x, y, obj_player).y;
+		ex = instance_nearest(x, y, obj_player_space).x;
+		ey = instance_nearest(x, y, obj_player_space).y;
 
 		with (instance_create_layer(x+75, y-75, "Instances", obj_enemy_blast)){
 			speed = 10 + random(15);
@@ -37,8 +37,8 @@ if distance_to_object(obj_player) <= 500 {
 	// third turret
 	if(shootCoolDown3 <= 0){	
 		var ex, ey;
-		ex = instance_nearest(x, y, obj_player).x;
-		ey = instance_nearest(x, y, obj_player).y;
+		ex = instance_nearest(x, y, obj_player_space).x;
+		ey = instance_nearest(x, y, obj_player_space).y;
 
 		with (instance_create_layer(x-75, y+75, "Instances", obj_enemy_blast)){
 			speed = 10 + random(15);
@@ -52,8 +52,8 @@ if distance_to_object(obj_player) <= 500 {
 	// fourth turret
 	if(shootCoolDown4 <= 0){	
 		var ex, ey;
-		ex = instance_nearest(x, y, obj_player).x;
-		ey = instance_nearest(x, y, obj_player).y;
+		ex = instance_nearest(x, y, obj_player_space).x;
+		ey = instance_nearest(x, y, obj_player_space).y;
 
 		with (instance_create_layer(x-75, y-75, "Instances", obj_enemy_blast)){
 			speed = 10 + random(15);
@@ -65,13 +65,13 @@ if distance_to_object(obj_player) <= 500 {
 		shootCoolDown4 -= .5 + random(1);
 }
 
-if distance_to_object(obj_player) <= 3000 {
+if distance_to_object(obj_player_space) <= 3000 {
 
 	// enemy hanger
 	if(enemyHangerSpawn1 <= 0){	
 		var ex, ey;
-		ex = instance_nearest(x, y, obj_player).x;
-		ey = instance_nearest(x, y, obj_player).y;
+		ex = instance_nearest(x, y, obj_player_space).x;
+		ey = instance_nearest(x, y, obj_player_space).y;
 
 		with (instance_create_layer(x, y, "Instances", enemy_fighter)){
 		    direction = point_direction(x, y, ex, ey);
