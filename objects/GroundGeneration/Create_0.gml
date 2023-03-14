@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 randomize()
-currentSpawnPointX = GroundGeneration.x-128
+sizeOfBlocks = 128
+currentSpawnPointX = GroundGeneration.x-sizeOfBlocks
 baseOffset = 20
 heightVariation = irandom_range(1,10)
 previousCollumHeight = 0
@@ -28,12 +29,24 @@ while(xManip>0)
 	
 	while(y<=currentCollumHieght)
 	{
-		instance_create_layer(currentSpawnPointX,room_height-256-(y*128), "Instances", obj_block_brick)
+		if(y=currentCollumHieght)
+		{
+			instance_create_layer(currentSpawnPointX,room_height-256-(y*sizeOfBlocks), "Instances", obj_block_ground1)
+		}
+		else if(y=currentCollumHieght-1)
+		{
+			instance_create_layer(currentSpawnPointX,room_height-256-(y*sizeOfBlocks), "Instances", obj_block_middle1)
+		}
+		else
+		{
+			instance_create_layer(currentSpawnPointX,room_height-256-(y*sizeOfBlocks), "Instances", obj_block_rock11)
+		}
+		
 		y++
 	}
 	
 	//makes this collum height the previous collum height for future refrence
 	previousCollumHeight = currentCollumHieght
-	currentSpawnPointX += 128
+	currentSpawnPointX += sizeOfBlocks
 	xManip--
 }
