@@ -1,5 +1,4 @@
 move_wrap(true, true, 0)
-shieldUp = true;
 
 
 // Need to initialize variables here too

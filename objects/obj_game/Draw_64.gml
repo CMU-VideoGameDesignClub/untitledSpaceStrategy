@@ -1,1 +1,1 @@
-draw_text(10, 10, points);
+draw_text(10, 10, obj_player_space.shieldUp);

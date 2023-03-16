@@ -39,8 +39,9 @@
     {"name":"inst_6813B962","path":"rooms/SpaceMap/SpaceMap.yy",},
     {"name":"inst_155CD1C8","path":"rooms/SpaceMap/SpaceMap.yy",},
     {"name":"inst_6F65302C","path":"rooms/SpaceMap/SpaceMap.yy",},
-    {"name":"inst_1EBEE7CF","path":"rooms/SpaceMap/SpaceMap.yy",},
     {"name":"inst_38D9E798","path":"rooms/SpaceMap/SpaceMap.yy",},
+    {"name":"inst_7683357C","path":"rooms/SpaceMap/SpaceMap.yy",},
+    {"name":"inst_2598A00A","path":"rooms/SpaceMap/SpaceMap.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -77,10 +78,13 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6813B962","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"enemy_fighter","path":"objects/enemy_fighter/enemy_fighter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5504.0,"y":3808.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_155CD1C8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"enemy_fighter","path":"objects/enemy_fighter/enemy_fighter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5504.0,"y":4096.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F65302C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"enemy_fighter","path":"objects/enemy_fighter/enemy_fighter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5120.0,"y":3840.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1EBEE7CF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"PlanetX","path":"objects/PlanetX/PlanetX.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5984.0,"y":4288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_38D9E798","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_worm_hole","path":"objects/obj_worm_hole/obj_worm_hole.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4928.0,"y":4160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"StarryBackground","path":"sprites/StarryBackground/StarryBackground.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7683357C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"PlanetX","path":"objects/PlanetX/PlanetX.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5952.0,"y":4288.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2598A00A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_upgrade_station","path":"objects/obj_upgrade_station/obj_upgrade_station.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5472.0,"y":4992.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"StarryBackground","path":"sprites/StarryBackground/StarryBackground.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Rooms",
