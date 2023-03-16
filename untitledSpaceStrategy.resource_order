@@ -25,6 +25,7 @@
     {"name":"space_mob","order":4,"path":"sprites/space_mob/space_mob.yy",},
     {"name":"obj_enemy_blast","order":2,"path":"objects/obj_enemy_blast/obj_enemy_blast.yy",},
     {"name":"background_space2","order":11,"path":"sprites/background_space2/background_space2.yy",},
+    {"name":"obj_block_brick20","order":24,"path":"objects/obj_block_brick20/obj_block_brick20.yy",},
     {"name":"obj_multiplayer","order":6,"path":"objects/obj_multiplayer/obj_multiplayer.yy",},
     {"name":"spr_planet_x","order":25,"path":"sprites/spr_planet_x/spr_planet_x.yy",},
     {"name":"spr_rock_big","order":1,"path":"sprites/spr_rock_big/spr_rock_big.yy",},
