@@ -3,8 +3,9 @@ distanceFromFighter = 0;
 ex = 0;
 ey = 0;
 
-displayX = 1600;
-displayY = 900;
+displayX = 1920;
+displayY = 1080;
+window_set_fullscreen(true);
 
 view_enabled = true;
 view_visible[0] = true;
