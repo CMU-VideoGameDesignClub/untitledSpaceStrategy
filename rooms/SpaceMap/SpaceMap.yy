@@ -43,6 +43,7 @@
     {"name":"inst_7683357C","path":"rooms/SpaceMap/SpaceMap.yy",},
     {"name":"inst_2598A00A","path":"rooms/SpaceMap/SpaceMap.yy",},
     {"name":"inst_25294588","path":"rooms/SpaceMap/SpaceMap.yy",},
+    {"name":"inst_67F4966E","path":"rooms/SpaceMap/SpaceMap.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -81,6 +82,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F65302C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"enemy_fighter","path":"objects/enemy_fighter/enemy_fighter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5120.0,"y":3840.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_38D9E798","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_worm_hole","path":"objects/obj_worm_hole/obj_worm_hole.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4928.0,"y":4160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_25294588","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block_brick","path":"objects/obj_block_brick/obj_block_brick.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5312.0,"y":4416.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_67F4966E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"space_enemy","path":"objects/space_enemy/space_enemy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5344.0,"y":4224.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7683357C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"PlanetX","path":"objects/PlanetX/PlanetX.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5952.0,"y":4288.0,},
