@@ -17,6 +17,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bullets","folderPath":"folders/Objects/Bullets.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GroundScene","folderPath":"folders/Objects/GroundScene.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy",},
@@ -34,6 +35,7 @@
     "IDEVersion": "2023.2.1.75",
   },
   "resources": [
+    {"id":{"name":"object_character_parent","path":"objects/object_character_parent/object_character_parent.yy",},},
     {"id":{"name":"MF","path":"sprites/MF/MF.yy",},},
     {"id":{"name":"obj_player_defeat_transition","path":"objects/obj_player_defeat_transition/obj_player_defeat_transition.yy",},},
     {"id":{"name":"obj_p2","path":"objects/obj_p2/obj_p2.yy",},},
@@ -94,6 +96,7 @@
     {"roomId":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
     {"roomId":{"name":"SpaceMap","path":"rooms/SpaceMap/SpaceMap.yy",},},
     {"roomId":{"name":"planetGround","path":"rooms/planetGround/planetGround.yy",},},
+    {"roomId":{"name":"SpaceMap","path":"rooms/SpaceMap/SpaceMap.yy",},},
     {"roomId":{"name":"Multiplayer","path":"rooms/Multiplayer/Multiplayer.yy",},},
     {"roomId":{"name":"DeepSpace69","path":"rooms/DeepSpace69/DeepSpace69.yy",},},
   ],
