@@ -1,0 +1,1 @@
+draw_text_ext_transformed(room_width / 2, room_height / 2, "PRESS ENTER", 10, 300, 2, 2, image_angle);
