@@ -17,5 +17,5 @@ if instance_exists(enemy_fighter){
 		}
 		friendlySpawn1 = (1*room_speed);
 	}
-		friendlySpawn1 -= .2;
+		friendlySpawn1 -= .5;
 }
