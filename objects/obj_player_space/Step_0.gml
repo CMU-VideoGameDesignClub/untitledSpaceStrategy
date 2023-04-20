@@ -24,8 +24,7 @@ if keyboard_check(vk_right)
 	 image_angle -= 4;
 }
 
-if keyboard_check_pressed(vk_space)
-{
+if keyboard_check_pressed(vk_space){
 	with (instance_create_layer(x-10, y-10, "Instances", obj_bullet)){
 		direction = obj_player_space.image_angle;
 		image_angle = direction;
@@ -35,5 +34,9 @@ if keyboard_check_pressed(vk_space)
 		image_angle = direction;
 	}
 }
+
+
+
+
 
 camera_set_view_size(view_camera[0], displayX + (obj_player_space.speed*obj_player_space.speed)*1.6, displayY + (obj_player_space.speed*obj_player_space.speed)*.9);

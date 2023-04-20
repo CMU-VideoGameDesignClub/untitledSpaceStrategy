@@ -5,5 +5,5 @@ cellSize += 1;
 // Apply the new cell size to the filter
 fx_set_parameter(transition_filter, "g_CellSize", cellSize);
 
-// Run Alarm 0 again in the next frame
+// Run Alarm 10 again in the next frame
 alarm[10] = 1;

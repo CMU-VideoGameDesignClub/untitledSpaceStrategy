@@ -1,4 +1,3 @@
-scrap = 0;
 distanceFromFighter = 0;
 ex = 0;
 ey = 0;
