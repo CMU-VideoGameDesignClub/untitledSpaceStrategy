@@ -1,5 +1,5 @@
 randomize()
-startscreenVar = irandom_range(2,2)
+startscreenVar = irandom_range(1,2)
 
 if (startscreenVar == 1)
 	room_goto(StartScreen)
