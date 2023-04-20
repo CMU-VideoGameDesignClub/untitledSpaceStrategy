@@ -35,6 +35,7 @@
     "IDEVersion": "2023.2.1.75",
   },
   "resources": [
+    {"id":{"name":"Sprite28","path":"sprites/Sprite28/Sprite28.yy",},},
     {"id":{"name":"object_character_parent","path":"objects/object_character_parent/object_character_parent.yy",},},
     {"id":{"name":"received_packet","path":"scripts/received_packet/received_packet.yy",},},
     {"id":{"name":"spr_bfl","path":"sprites/spr_bfl/spr_bfl.yy",},},
@@ -122,12 +123,13 @@
     {"id":{"name":"Multiplayer","path":"rooms/Multiplayer/Multiplayer.yy",},},
     {"id":{"name":"obj_block_parent","path":"objects/obj_block_parent/obj_block_parent.yy",},},
     {"id":{"name":"redblast","path":"sprites/redblast/redblast.yy",},},
+    {"id":{"name":"Sprite27","path":"sprites/Sprite27/Sprite27.yy",},},
     {"id":{"name":"SpaceMap","path":"rooms/SpaceMap/SpaceMap.yy",},},
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_load_game","path":"rooms/rm_load_game/rm_load_game.yy",},},
-    {"roomId":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
     {"roomId":{"name":"planetGround","path":"rooms/planetGround/planetGround.yy",},},
+    {"roomId":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
     {"roomId":{"name":"SpaceMap","path":"rooms/SpaceMap/SpaceMap.yy",},},
     {"roomId":{"name":"planetGroundOld","path":"rooms/planetGroundOld/planetGroundOld.yy",},},
     {"roomId":{"name":"SpaceMap","path":"rooms/SpaceMap/SpaceMap.yy",},},
