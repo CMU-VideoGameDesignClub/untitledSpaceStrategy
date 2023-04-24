@@ -42,7 +42,7 @@
   },
   "sequenceId": null,
   "views": [
-    {"hborder":32,"hport":4320,"hspeed":-1,"hview":4320,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":7680,"wview":7680,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":32,"hport":4320,"hspeed":-1,"hview":4320,"inherit":false,"objectId":{"name":"obj_player_ground","path":"objects/obj_player_ground/obj_player_ground.yy",},"vborder":32,"visible":true,"vspeed":-1,"wport":7680,"wview":7680,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
@@ -53,7 +53,7 @@
   ],
   "viewSettings": {
     "clearDisplayBuffer": true,
-    "clearViewBackground": false,
+    "clearViewBackground": true,
     "enableViews": true,
     "inheritViewSettings": false,
   },
