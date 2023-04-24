@@ -3,12 +3,13 @@
 //topSprite = redblast
 //middleSprite = spr_bullet
 //bottomSprite = Sprite28
+blockPixel = 32;
 randomize()
 currentSpawnPointX = GroundGeneration.x
 baseOffset = -1
 heightVariation = irandom_range(0,5)
 previousCollumHeight = 0
-x = 32//irandom_range(64,512)
+x = irandom_range(64,512)
 xManip = x
 
 while(xManip>0)
@@ -34,24 +35,24 @@ while(xManip>0)
 		
 		if(y==currentCollumHieght)
 		{
-			with(instance_create_layer(currentSpawnPointX,room_height-(y*128), "Ground", obj_block_brick))
-			{sprite_index =spr_planet_x;}
+			with(instance_create_layer(currentSpawnPointX,room_height-(y*blockPixel), "Ground", obj_block_brick))
+			{sprite_index =G1_Top;}
 		}
 		else if(y==currentCollumHieght-1)
 		{
-			with(instance_create_layer(currentSpawnPointX,room_height-(y*128), "Ground", obj_block_brick))
-			{sprite_index = spr_dirt_block;}
+			with(instance_create_layer(currentSpawnPointX,room_height-(y*blockPixel), "Ground", obj_block_brick))
+			{sprite_index = G1_Middle;}
 		}
 		else
 		{
-			with(instance_create_layer(currentSpawnPointX,room_height-(y*128), "Ground", obj_block_brick))
-			{sprite_index = Sprite28;}
+			with(instance_create_layer(currentSpawnPointX,room_height-(y*blockPixel), "Ground", obj_block_brick))
+			{sprite_index = G1_Bottom;}
 		}
 		y++
 	}
 	
 	//makes this collum height the previous collum height for future refrence
 	previousCollumHeight = currentCollumHieght
-	currentSpawnPointX += 128
+	currentSpawnPointX += blockPixel
 	xManip--
 }
