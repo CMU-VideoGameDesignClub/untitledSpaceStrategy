@@ -22,3 +22,15 @@ if(jump) {
 
 x+= xSpeed;
 y+= ySpeed;
+
+if mouse_check_button_pressed(mb_left) {
+	
+	var mouseX = mouse_x;
+    var mouseY = mouse_y;
+
+	
+	with (instance_create_layer(obj_player_ground.x, obj_player_ground.y, "Instances", obj_bullet)){
+		direction = point_direction(obj_player_ground.x, obj_player_ground.y, mouseX, mouseY);
+		image_angle = direction;
+	}
+}

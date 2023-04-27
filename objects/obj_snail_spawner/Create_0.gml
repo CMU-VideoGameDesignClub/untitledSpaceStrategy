@@ -1,0 +1,1 @@
+snail_spawner = 0;

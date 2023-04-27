@@ -37,5 +37,8 @@
     "path": "sprites/player_ship/player_ship.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "Player",
+  ],
   "visible": true,
 }
