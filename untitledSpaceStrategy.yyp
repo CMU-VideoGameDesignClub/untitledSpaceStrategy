@@ -123,6 +123,7 @@
     {"id":{"name":"spr_rock_small","path":"sprites/spr_rock_small/spr_rock_small.yy",},},
     {"id":{"name":"obj_bullet_multiplayer","path":"objects/obj_bullet_multiplayer/obj_bullet_multiplayer.yy",},},
     {"id":{"name":"Collisions","path":"scripts/Collisions/Collisions.yy",},},
+    {"id":{"name":"snd_bfg_division","path":"sounds/snd_bfg_division/snd_bfg_division.yy",},},
     {"id":{"name":"obj_worm_hole_home","path":"objects/obj_worm_hole_home/obj_worm_hole_home.yy",},},
     {"id":{"name":"enemy_fighter","path":"objects/enemy_fighter/enemy_fighter.yy",},},
     {"id":{"name":"spr_stars_animated","path":"sprites/spr_stars_animated/spr_stars_animated.yy",},},

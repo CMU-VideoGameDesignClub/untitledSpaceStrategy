@@ -10,4 +10,4 @@ if(snail_spawner<= 0){
 	}
 	snail_spawner = (1*room_speed);
 }
-	snail_spawner -= .95
+	snail_spawner -= 2

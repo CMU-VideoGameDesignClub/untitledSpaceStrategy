@@ -3,7 +3,7 @@ if distance_to_object(obj_player_space) <= 100 {
 	{
 		room_goto(planetGround)
 		audio_stop_all()
-		audio_play_sound(backgroundbitmmusic, 2, true);
+		audio_play_sound(snd_bfg_division, 2, true);
 	}
 }
 
