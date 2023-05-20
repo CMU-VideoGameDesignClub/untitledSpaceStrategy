@@ -7,6 +7,9 @@ if (xDirection != 0) image_xscale = xDirection;
 xSpeed = xDirection * spd;
 ySpeed++;
 
+	var mouseX = mouse_x;
+    var mouseY = mouse_y;
+	direction = point_direction(obj_player_ground.x, obj_player_ground.y, mouseX, mouseY);
  
 
 if(place_meeting(x+xSpeed, y, obj_block_brick)){
@@ -34,3 +37,27 @@ if mouse_check_button_pressed(mb_left) {
 		image_angle = direction;
 	}
 }
+if mouse_check_button_pressed(mb_right) {
+	if(BigBeamCooldown = -5.5){	
+		audio_stop_sound(snd_large_beam)
+		instance_destroy(obj_large_beam_charge)
+		with (instance_create_layer(x, y, "Instances", obj_enemy_large_beam)){
+			audio_stop_sound(snd_large_beam_charge)
+		    direction = point_direction(obj_player_ground.x, obj_player_ground.y, mouseX, mouseY)
+			image_angle = direction;
+		}
+		BigBeamCooldown = (.06*room_speed);
+	}
+		BigBeamCooldown -= .01;
+		
+	if(BigBeamCooldown = -.5){
+		audio_stop_sound(snd_large_beam_charge)
+		instance_destroy(obj_enemy_large_beam)
+		with (instance_create_layer(x, y, "Instances", obj_large_beam_charge)){
+			audio_stop_sound(snd_large_beam)
+		    direction = point_direction(obj_player_ground.x, obj_player_ground.y, mouseX, mouseY)
+			image_angle = direction;
+		}
+	}
+}
+

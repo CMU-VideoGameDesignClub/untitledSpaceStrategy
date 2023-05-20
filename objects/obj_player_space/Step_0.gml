@@ -5,21 +5,21 @@ move_wrap(true, true, 0)
 displayX = 1920;
 displayY = 1080;
 
-if keyboard_check(vk_up)
+if keyboard_check(ord("W"))
 {
 	 motion_add(image_angle, .1)
 }
-if keyboard_check(vk_down)
+if keyboard_check(ord("S"))
 {
 	if(obj_player_space.speed > 0){
 		obj_player_space.speed -= .35;
 	}
 }
-if keyboard_check(vk_left)
+if keyboard_check(ord("A"))
 {
 	 image_angle += 4;
 }
-if keyboard_check(vk_right)
+if keyboard_check(ord("D"))
 {
 	 image_angle -= 4;
 }
