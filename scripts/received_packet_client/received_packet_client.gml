@@ -27,6 +27,19 @@ function received_packet_client(buffer)
 			
 			ds_map_add(socket_to_instanceid,_socket,_slave);
 			break;
+			
+		case NETWORK_CLIENT.PLAYER_DISCONNECT:
+			var _socket = buffer_read(buffer,buffer_u8);
+			var _player = ds_map_find_value(socket_to_instanceid,_socket);
+			
+			with(_player)
+			{
+				instance_destroy();
+			}
+			
+			ds_map_delete(socket_to_instanceid,_socket);
+			
+			break;
 		
 		case NETWORK_CLIENT.MOVE:
 			var _sock = buffer_read(buffer,buffer_u8);

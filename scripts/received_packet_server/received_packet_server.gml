@@ -24,7 +24,7 @@ function received_packet_server(buffer,socket){
 				buffer_write(server_buffer,buffer_u8,socket);
 				buffer_write(server_buffer,buffer_u16,move_x);
 				buffer_write(server_buffer,buffer_u16,move_y);
-				network_send_packet(socket,server_buffer,buffer_tell(server_buffer));
+				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
 				
 				_i++
 			}
