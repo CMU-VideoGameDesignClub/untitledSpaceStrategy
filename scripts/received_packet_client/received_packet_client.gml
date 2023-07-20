@@ -6,9 +6,8 @@ function received_packet_client(buffer)
 
 	switch(msgid)
 	{
-		case 1: //hello world
-			var message = buffer_read(buffer,buffer_string);
-			show_message(message);
+		case 1:
+			obj_player_client.image_index = 1;
 			break;
 	}
 }
