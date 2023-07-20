@@ -55,11 +55,23 @@ switch(type_event)
 		socket = ds_map_find_value(async_load, "socket");
 		ds_list_delete(socket_list,ds_list_find_index(socket_list, socket));
 		
+		var _i = 0
+		repeat(ds_list_size(socket_list))
+		{
+			var _sock = ds_list_find_value(socket_list,_i)
+			buffer_seek(server_buffer,buffer_seek_start,0);
+			buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.PLAYER_DISCONECT);
+			buffer_write(server_buffer,buffer_u8,socket);
+			network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+			
+			_i++
+		}
+		
 		with(ds_map_find_value(socket_to_instanceid,socket))
 		{
 			instance_destroy();
 		}
-		
+		ds_map_delete(socket_to_instanceid,socket);
 		break;
 		
 	case network_type_data:
