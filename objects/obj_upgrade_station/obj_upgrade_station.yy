@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Celestial Bodies",
+    "path": "folders/Objects/Celestial Bodies.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -1,4 +1,4 @@
-if(room==StartScreen || room==StartScreen2 ){
+if(room==rm_start_screen || room==rm_start_screen2 ){
 	playerHP = -1	
 }
 

@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Objects/Bullets.yy",
+    "name": "Missiles",
+    "path": "folders/Objects/Missiles.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "bolt1",
-    "path": "sprites/bolt1/bolt1.yy",
+    "name": "spr_bolt1",
+    "path": "sprites/spr_bolt1/spr_bolt1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

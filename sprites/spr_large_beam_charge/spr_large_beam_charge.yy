@@ -49,8 +49,8 @@
   },
   "origin": 3,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Missiles",
+    "path": "folders/Sprites/Missiles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

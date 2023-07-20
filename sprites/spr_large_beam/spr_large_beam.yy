@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 3,
   "parent": {
-    "name": "untitledSpaceStrategy",
-    "path": "untitledSpaceStrategy.yyp",
+    "name": "Missiles",
+    "path": "folders/Sprites/Missiles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Objects/Bullets.yy",
+    "name": "Missiles",
+    "path": "folders/Objects/Missiles.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "enemy_blast_sprite",
-    "path": "sprites/enemy_blast_sprite/enemy_blast_sprite.yy",
+    "name": "spr_enemy_blast_sprite",
+    "path": "sprites/spr_enemy_blast_sprite/spr_enemy_blast_sprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,

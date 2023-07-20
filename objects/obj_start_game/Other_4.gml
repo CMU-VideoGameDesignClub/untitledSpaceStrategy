@@ -1,4 +1,4 @@
-audio_play_sound(backgroundSound, 2, true);
+audio_play_sound(snd_backgroundSound, 2, true);
 
 scrap = 0;
 distanceFromFighter = 0;

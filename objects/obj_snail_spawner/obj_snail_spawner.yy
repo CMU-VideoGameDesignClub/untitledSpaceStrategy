@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "GroundScene",
+    "path": "folders/Objects/GroundScene.yy",
   },
   "parentObjectId": null,
   "persistent": false,

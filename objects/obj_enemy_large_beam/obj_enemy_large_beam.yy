@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Objects/Bullets.yy",
+    "name": "Missiles",
+    "path": "folders/Objects/Missiles.yy",
   },
   "parentObjectId": null,
   "persistent": false,

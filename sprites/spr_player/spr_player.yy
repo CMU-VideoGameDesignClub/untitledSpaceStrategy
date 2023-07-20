@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "GroundScene",
-    "path": "folders/Objects/GroundScene.yy",
+    "name": "Mobs",
+    "path": "folders/Sprites/Mobs.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

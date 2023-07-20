@@ -21,8 +21,8 @@
     "path": "folders/Objects/GroundScene.yy",
   },
   "parentObjectId": {
-    "name": "object_character_parent",
-    "path": "objects/object_character_parent/object_character_parent.yy",
+    "name": "obj_character_parent",
+    "path": "objects/obj_character_parent/obj_character_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

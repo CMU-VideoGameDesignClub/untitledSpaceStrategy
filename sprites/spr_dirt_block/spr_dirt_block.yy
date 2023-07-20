@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "GroundScene",
-    "path": "folders/Objects/GroundScene.yy",
+    "name": "GroundTIles",
+    "path": "folders/Sprites/GroundTIles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

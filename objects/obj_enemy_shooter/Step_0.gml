@@ -9,7 +9,7 @@ if abs(x - obj_player_ground.x) <= 200 && abs(y - obj_player_ground.y) <= 50 {
     direction = point_direction(x, y, obj_player.x, obj_player.y);
 
     // Create a bullet object
-    instance_create_layer(x, y, fighter_blast);
+    instance_create_layer(x, y, obj_fighter_blast);
 
     // Set the speed and direction of the bullet
 }

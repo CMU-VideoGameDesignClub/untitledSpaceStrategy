@@ -3,6 +3,6 @@ if distance_to_object(obj_player_space) <= 50 {
 	if keyboard_check(vk_enter)
 	// if(keyboard_check(ord("e")))
 	{
-	 room_goto(DeepSpace69)
+	 room_goto(rm_deep_space69)
 	}
 }
