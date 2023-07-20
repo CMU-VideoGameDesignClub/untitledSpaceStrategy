@@ -5,11 +5,28 @@ switch(type_event)
 	case network_type_connect:
 		socket = ds_map_find_value(async_load, "socket");
 		ds_list_add(socket_list, socket);
+		
+		var _player = instance_create_depth(playerSpawn_x,playerSpawn_y, depth, obj_player_server)
+		ds_map_add(socket_to_instanceid,socket,_player)
+		
+		buffer_seek(server_buffer, buffer_seek_start,0);
+		buffer_write(server_buffer, buffer_u8,NETWORK_SERVER.PLAYER_CONNECT);
+		buffer_write(server_buffer, buffer_u8,socket);
+		buffer_write(server_buffer, buffer_u16,_player.x);
+		buffer_write(server_buffer, buffer_u16,_player.y);
+		network_send_packet(socket,server_buffer,buffer_tell(server_buffer));
+		
 		break;
 		
 	case network_type_disconnect:
 		socket = ds_map_find_value(async_load, "socket");
 		ds_list_delete(socket_list,ds_list_find_index(socket_list, socket));
+		
+		with(ds_map_find_value(socket_to_instanceid,socket))
+		{
+			instance_destroy();
+		}
+		
 		break;
 		
 	case network_type_data:

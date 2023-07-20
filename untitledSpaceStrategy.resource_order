@@ -101,6 +101,7 @@
     {"name":"spr_planet_c","order":24,"path":"sprites/spr_planet_c/spr_planet_c.yy",},
     {"name":"spr_snail","order":5,"path":"sprites/spr_snail/spr_snail.yy",},
     {"name":"spr_enemy_blast_sprite","order":2,"path":"sprites/spr_enemy_blast_sprite/spr_enemy_blast_sprite.yy",},
+    {"name":"obj_player_server","order":6,"path":"objects/obj_player_server/obj_player_server.yy",},
     {"name":"obj_ground_generation","order":2,"path":"objects/obj_ground_generation/obj_ground_generation.yy",},
     {"name":"snd_large_beam_charge","order":10,"path":"sounds/snd_large_beam_charge/snd_large_beam_charge.yy",},
     {"name":"obj_p1","order":1,"path":"objects/obj_p1/obj_p1.yy",},
