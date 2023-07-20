@@ -1,0 +1,1 @@
+friendlySpawn1 = 0;

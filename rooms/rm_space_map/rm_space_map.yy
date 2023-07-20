@@ -28,10 +28,10 @@
     {"name":"inst_192E2112","path":"rooms/rm_space_map/rm_space_map.yy",},
     {"name":"inst_7683357C","path":"rooms/rm_space_map/rm_space_map.yy",},
     {"name":"inst_2598A00A","path":"rooms/rm_space_map/rm_space_map.yy",},
-    {"name":"inst_373837AF","path":"rooms/rm_space_map/rm_space_map.yy",},
     {"name":"inst_4208A96C","path":"rooms/rm_space_map/rm_space_map.yy",},
     {"name":"inst_6E442999","path":"rooms/rm_space_map/rm_space_map.yy",},
     {"name":"inst_1ECFD8D2","path":"rooms/rm_space_map/rm_space_map.yy",},
+    {"name":"inst_6D458045","path":"rooms/rm_space_map/rm_space_map.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -62,7 +62,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7683357C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_planet_x","path":"objects/obj_planet_x/obj_planet_x.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5952.0,"y":4288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2598A00A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_upgrade_station","path":"objects/obj_upgrade_station/obj_upgrade_station.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5472.0,"y":4992.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_373837AF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_worm_hole","path":"objects/obj_worm_hole/obj_worm_hole.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4800.0,"y":4352.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D458045","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_worm_hole_hub","path":"objects/obj_worm_hole_hub/obj_worm_hole_hub.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4992.0,"y":4416.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":4.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_stars_animated","path":"sprites/spr_stars_animated/spr_stars_animated.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
