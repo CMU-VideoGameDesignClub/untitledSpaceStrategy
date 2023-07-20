@@ -16,6 +16,6 @@ switch(type_event)
 		buffer = ds_map_find_value(async_load, "buffer");
 		socket = ds_map_find_value(async_load, "id");
 		buffer_seek(buffer, buffer_seek_start, 0);
-		received_packet(buffer, socket);
+		received_packet_server(buffer, socket)
 		break;
 }
