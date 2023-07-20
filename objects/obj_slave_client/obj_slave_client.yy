@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_player_client",
+  "name": "obj_slave_client",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_ship",
-    "path": "sprites/spr_player_ship/spr_player_ship.yy",
+    "name": "spr_friendly_fighter",
+    "path": "sprites/spr_friendly_fighter/spr_friendly_fighter.yy",
   },
   "spriteMaskId": null,
   "visible": true,

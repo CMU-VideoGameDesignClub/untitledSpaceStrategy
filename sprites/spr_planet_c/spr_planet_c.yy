@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "untitledSpaceStrategy",
-    "path": "untitledSpaceStrategy.yyp",
+    "name": "Celestial Bodies",
+    "path": "folders/Sprites/Celestial Bodies.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

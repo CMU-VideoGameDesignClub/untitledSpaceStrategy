@@ -4,6 +4,7 @@ window_set_size(1366,768)
 enum NETWORK_SERVER 
 {
 	PLAYER_CONNECT,
+	PLAYER_JOINED,
 	MOVE	
 }
 
