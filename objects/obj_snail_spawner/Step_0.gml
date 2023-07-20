@@ -3,7 +3,7 @@ if(snail_spawner<= 0){
 	//ex = instance_nearest(x, y, obj_player_space).x;
 	//ey = instance_nearest(x, y, obj_player_space).y;
 
-	with (instance_create_layer(x+irandom_range(-100,100), y+irandom_range(-100,100), "Instances", obj_death_snail)){
+	with (instance_create_layer(x+irandom_range(-100,100), y+irandom_range(-100,100), "Instances", obj_bee)){
 	//direction = point_direction(x, y, ex, ey);
 	image_angle = direction;
 	speed = 5

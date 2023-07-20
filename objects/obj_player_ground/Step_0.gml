@@ -37,7 +37,7 @@ if mouse_check_button_pressed(mb_left) {
 		image_angle = direction;
 	}
 }
-if mouse_check_button_pressed(mb_right) {
+if mouse_check_button_pressed(mb_right) || instance_exists(obj_large_beam_charge || instance_exists(obj_enemy_large_beam)){
 	if(BigBeamCooldown = -5.5){	
 		audio_stop_sound(snd_large_beam)
 		instance_destroy(obj_large_beam_charge)
