@@ -120,6 +120,7 @@
     {"id":{"name":"rm_start_screen","path":"rooms/rm_start_screen/rm_start_screen.yy",},},
     {"id":{"name":"con_client","path":"objects/con_client/con_client.yy",},},
     {"id":{"name":"spr_upgrade_station","path":"sprites/spr_upgrade_station/spr_upgrade_station.yy",},},
+    {"id":{"name":"snd_space_cartel","path":"sounds/snd_space_cartel/snd_space_cartel.yy",},},
     {"id":{"name":"obj_snail_spawner","path":"objects/obj_snail_spawner/obj_snail_spawner.yy",},},
     {"id":{"name":"rm_planet_ground_y","path":"rooms/rm_planet_ground_y/rm_planet_ground_y.yy",},},
     {"id":{"name":"snd_shield_absorb","path":"sounds/snd_shield_absorb/snd_shield_absorb.yy",},},

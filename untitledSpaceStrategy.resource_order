@@ -89,6 +89,7 @@
     {"name":"obj_planet_x","order":3,"path":"objects/obj_planet_x/obj_planet_x.yy",},
     {"name":"rm_start_screen","order":3,"path":"rooms/rm_start_screen/rm_start_screen.yy",},
     {"name":"spr_upgrade_station","order":3,"path":"sprites/spr_upgrade_station/spr_upgrade_station.yy",},
+    {"name":"snd_space_cartel","order":13,"path":"sounds/snd_space_cartel/snd_space_cartel.yy",},
     {"name":"obj_snail_spawner","order":12,"path":"objects/obj_snail_spawner/obj_snail_spawner.yy",},
     {"name":"rm_planet_ground_y","order":10,"path":"rooms/rm_planet_ground_y/rm_planet_ground_y.yy",},
     {"name":"snd_shield_absorb","order":3,"path":"sounds/snd_shield_absorb/snd_shield_absorb.yy",},
