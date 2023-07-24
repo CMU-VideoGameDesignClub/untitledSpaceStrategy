@@ -1,6 +1,24 @@
 /* in progress
-motion_add(image_angle, .1)
+if keyboard_check(ord("W"))
+{
+	 motion_add(image_angle, .1)
+}
+if keyboard_check(ord("S"))
+{
+	if(obj_player_client.speed > 0){
+		obj_player_client.speed -= .35;
+	}
+}
+if keyboard_check(ord("A"))
+{
+	 image_angle += 4;
+}
+if keyboard_check(ord("D"))
+{
+	 image_angle -= 4;
+}
 
+/*
 // start at beginning of buffer
 buffer_seek(con_client.client_buffer,buffer_seek_start,0);
 // write to the bufferthat we will be using "MOVE"

@@ -6,7 +6,7 @@ switch(type_event)
 {
 	// when packet is received from the server ->
 	case network_type_data:
-	
+		
 		// grab the buffer
 		buffer = ds_map_find_value(async_load,"buffer");
 		
@@ -15,6 +15,5 @@ switch(type_event)
 		
 		// script of possibilities
 		received_packet_client(buffer);
-		
 		break;
 }

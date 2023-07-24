@@ -1,7 +1,6 @@
 // testing purposes
 window_set_fullscreen(false);
 window_set_size(1366,768)
-
 // stops all game sounds when server starts
 audio_stop_all()
 
@@ -9,9 +8,10 @@ audio_stop_all()
 // "find and replace" keywords with numerical constants starting with 0
 enum NETWORK_SERVER 
 {
+	PLAYER_ESTABLISHED,
 	PLAYER_CONNECT,
 	PLAYER_JOINED,
-	PLAYER_DISCONECT,
+	PLAYER_DISCONNECT,
 	MOVE	
 }
 
