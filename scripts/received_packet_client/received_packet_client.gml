@@ -15,10 +15,10 @@ function received_packet_client(buffer)
 			global.mysocket = _socket;
 			
 			// start at beginning of buffer
-			buffer_seek(con_client.client_buffer,buffer_seek_start,0);
-			buffer_write(con_client.client_buffer,buffer_u8,NETWORK_CLIENT.PLAYER_ESTABLISHED);
-			buffer_write(con_client.client_buffer,buffer_string,con_mp_game.username);
-			network_send_packet(con_client.client,con_client.client_buffer,buffer_tell(con_client.client_buffer))
+			buffer_seek(client_buffer,buffer_seek_start,0);
+			buffer_write(client_buffer,buffer_u8,NETWORK_CLIENT.PLAYER_ESTABLISHED);
+			buffer_write(client_buffer,buffer_string,con_mp_game.username);
+			network_send_packet(client,client_buffer,buffer_tell(client_buffer))
 			break;
 		
 		// when packet sent for the server is assigned PLAYER_CONNECT

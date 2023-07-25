@@ -1,4 +1,4 @@
-if room != rm_client || rm_server
+if room != rm_mp_menu
 	exit;
 
 draw_set_valign(fa_middle)
