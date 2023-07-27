@@ -58,5 +58,24 @@ function received_packet_server(buffer,socket){
 				_i++
 			}
 			break;
+			
+		case NETWORK_SERVER.CHAT:
+			var _chat = buffer_read(buffer,buffer_string);
+
+			// send chat to other players
+			var _i = 0;
+			repeat(ds_list_size(socket_list))
+			{
+				// store iterated client into variable
+				var _sock = ds_list_find_value(socket_list,_i)
+				
+				buffer_seek(server_buffer,buffer_seek_start,0);
+				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.CHAT);
+				buffer_write(server_buffer,buffer_string,_chat);
+				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+				_i++
+			}			
+			
+			break;
 	}
 }

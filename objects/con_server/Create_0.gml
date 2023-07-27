@@ -1,6 +1,6 @@
 // testing purposes
 window_set_fullscreen(false);
-window_set_size(1366,768)
+window_set_size(400,400)
 // stops all game sounds when server starts
 audio_stop_all()
 
@@ -12,7 +12,8 @@ enum NETWORK_SERVER
 	PLAYER_CONNECT,
 	PLAYER_JOINED,
 	PLAYER_DISCONNECT,
-	MOVE	
+	MOVE,
+	CHAT,
 }
 
 // arbitrary port number and max client

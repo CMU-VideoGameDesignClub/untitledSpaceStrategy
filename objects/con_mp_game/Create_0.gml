@@ -1,1 +1,2 @@
-username = get_string_async("Please enter a username","")
+username = get_string("Please enter a username","")
+window_set_fullscreen(true)
