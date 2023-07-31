@@ -1,6 +1,7 @@
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
+// draw chat room
 for(var i = 0; i<chatSize;i++)
 {
 	draw_set_color(ds_list_find_value(global.chat_color,i));

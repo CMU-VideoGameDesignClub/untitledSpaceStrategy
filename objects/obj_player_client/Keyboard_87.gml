@@ -1,4 +1,4 @@
-/* in progress
+ /* in progress
 motion_add(image_angle, .1)
 
 // start at beginning of buffer

@@ -84,5 +84,35 @@ function received_packet_client(buffer)
 			_player.x = move_x
 			_player.y = move_y
 			break;
+			
+		case NETWORK_CLIENT.CHAT:
+			var _chat = buffer_read(buffer,buffer_string);
+			var _color = buffer_read(buffer,buffer_u8);
+			ds_list_insert(global.chat,0,_chat);
+			
+			if _color = 1 // Client Color
+				ds_list_insert(global.chat_color,0,c_white);
+			if _color = 2 // Server Color
+				ds_list_insert(global.chat_color,0,c_red);
+			break
+
+		case NETWORK_CLIENT.SHOOT:
+			// read the buffer into a variable
+			var _sock = buffer_read(buffer,buffer_u8);
+			// read the buffer from server into a shoot and direction var for client 
+			var _shoot = buffer_read(buffer,buffer_bool);
+			var _direction = buffer_read(buffer,buffer_u16);
+			// find and store the specifed player or slave from the incoming buffer
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			// assign the x and y from the server to "this" player or slave
+			if _shoot == true
+			{
+					with (instance_create_layer(_player.x-10, _player.y-10, "Instances", obj_bullet)){
+						direction = _direction;
+						image_angle = direction;
+					}
+			}
+				
+			break;
 	}
 }
