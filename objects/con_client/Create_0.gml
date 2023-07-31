@@ -1,6 +1,6 @@
 // testing purposes
 window_set_fullscreen(false);
-
+window_set_size(1366,768)
 
 // play cool af music
 audio_stop_all()
@@ -16,6 +16,9 @@ enum NETWORK_CLIENT
 	MOVE,
 	CHAT,
 	SHOOT,
+	FORWARD,
+	LEFT,
+	RIGHT,
 	
 }
 // create new client socket using tcp protocol into variable client

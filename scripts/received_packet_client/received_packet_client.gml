@@ -112,7 +112,32 @@ function received_packet_client(buffer)
 						image_angle = direction;
 					}
 			}
-				
+			break;
+			
+		case NETWORK_CLIENT.FORWARD:
+			// read the buffer into a variable
+			var _sock = buffer_read(buffer,buffer_u8);
+			// read the buffer from server into a shoot and direction var for client 
+			var _forward = buffer_read(buffer,buffer_bool);
+			var _angle = buffer_read(buffer,buffer_u16);
+			// find and store the specifed player or slave from the incoming buffer
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			// assign the x and y from the server to "this" player or slave
+			if _forward == true
+			{
+				motion_add(_player.image_angle,.1)
+				//_player.speed+=.1
+			}
+			break;
+			
+		case NETWORK_CLIENT.LEFT:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _left = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			if _left == true
+			{
+				 _player.image_angle+=4
+			}
 			break;
 	}
 }
