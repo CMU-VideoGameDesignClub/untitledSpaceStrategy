@@ -12,10 +12,10 @@ enum NETWORK_SERVER
 	PLAYER_CONNECT,
 	PLAYER_JOINED,
 	PLAYER_DISCONNECT,
-	MOVE,
 	CHAT,
 	SHOOT,
 	FORWARD,
+	STOP,
 	LEFT,
 	RIGHT,
 }
@@ -35,6 +35,6 @@ socket_list = ds_list_create();
 socket_to_instanceid = ds_map_create();
 
 // player spawns at server at specific coordinates
-playerSpawn_x = 100;
-playerSpawn_y = 100;
+playerSpawn_x = room_width/2;
+playerSpawn_y = room_height/2;
 

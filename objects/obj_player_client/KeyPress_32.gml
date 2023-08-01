@@ -4,8 +4,8 @@ buffer_seek(con_client.client_buffer,buffer_seek_start,0);
 buffer_write(con_client.client_buffer,buffer_u8,NETWORK_CLIENT.SHOOT);
 // write if space was pressed
 buffer_write(con_client.client_buffer,buffer_bool,true);
-// write to the buffer the direction of the player
-buffer_write(con_client.client_buffer,buffer_u16,obj_player_client.direction);
+// write to the buffer the "direction or image angle" of the player
+buffer_write(con_client.client_buffer,buffer_u16,obj_player_client.image_angle);
 // write to the buffer the x/y position of the player
 buffer_write(con_client.client_buffer,buffer_u16,obj_player_client.x);
 buffer_write(con_client.client_buffer,buffer_u16,obj_player_client.y);

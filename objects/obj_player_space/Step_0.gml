@@ -1,9 +1,7 @@
-move_wrap(true, true, 0)
-
-
-// Need to initialize variables here too
 displayX = 1920;
 displayY = 1080;
+
+move_wrap(true, true, 0)
 
 if keyboard_check(ord("W"))
 {

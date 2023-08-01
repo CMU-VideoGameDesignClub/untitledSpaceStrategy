@@ -70,20 +70,6 @@ function received_packet_client(buffer)
 			// remove the socket from the Data Structure Map
 			ds_map_delete(socket_to_instanceid,_socket);
 			break;
-		
-		// when packet sent for the server is assigned MOVE ->
-		case NETWORK_CLIENT.MOVE:
-			// read the buffer into a variable
-			var _sock = buffer_read(buffer,buffer_u8);
-			// read the buffer from server into an x and y for client 
-			var move_x = buffer_read(buffer,buffer_u16);
-			var move_y = buffer_read(buffer,buffer_u16);
-			// find and store the specifed player or slave from the incoming buffer
-			_player = ds_map_find_value(socket_to_instanceid,_sock);
-			// assign the x and y from the server to "this" player or slave
-			_player.x = move_x
-			_player.y = move_y
-			break;
 			
 		case NETWORK_CLIENT.CHAT:
 			var _chat = buffer_read(buffer,buffer_string);
@@ -107,7 +93,7 @@ function received_packet_client(buffer)
 			// assign the x and y from the server to "this" player or slave
 			if _shoot == true
 			{
-					with (instance_create_layer(_player.x-10, _player.y-10, "Instances", obj_bullet)){
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet)){
 						direction = _direction;
 						image_angle = direction;
 					}
@@ -115,18 +101,33 @@ function received_packet_client(buffer)
 			break;
 			
 		case NETWORK_CLIENT.FORWARD:
-			// read the buffer into a variable
 			var _sock = buffer_read(buffer,buffer_u8);
-			// read the buffer from server into a shoot and direction var for client 
 			var _forward = buffer_read(buffer,buffer_bool);
-			var _angle = buffer_read(buffer,buffer_u16);
-			// find and store the specifed player or slave from the incoming buffer
+			//var _direction = buffer_read(buffer,buffer_u16)
 			_player = ds_map_find_value(socket_to_instanceid,_sock);
-			// assign the x and y from the server to "this" player or slave
+			
 			if _forward == true
 			{
-				motion_add(_player.image_angle,.1)
-				//_player.speed+=.1
+				with(_player)
+				{
+					motion_add(image_angle, .1)
+				}
+			}
+			break;
+			
+		case NETWORK_CLIENT.STOP:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _stop = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			if _stop == true
+			{
+				with(_player)
+				{
+					if(speed > 0)
+					{
+						speed -= .35;
+					}
+				}
 			}
 			break;
 			
@@ -136,8 +137,24 @@ function received_packet_client(buffer)
 			_player = ds_map_find_value(socket_to_instanceid,_sock);
 			if _left == true
 			{
-				 _player.image_angle+=4
+				with(_player)
+				{
+					image_angle+=4
+				}
 			}
 			break;
+			
+		case NETWORK_CLIENT.RIGHT:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _right = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			if _right == true
+			{
+				with(_player)
+				{
+					image_angle-=4
+				}
+			}
+			break;			
 	}
 }

@@ -9,3 +9,9 @@ else{
 	shieldUp = 0;
 	scrap = 100;
 	BFL = 0;
+	
+displayX = 1920;
+displayY = 1080;
+
+move_wrap(true, true, 0)
+
