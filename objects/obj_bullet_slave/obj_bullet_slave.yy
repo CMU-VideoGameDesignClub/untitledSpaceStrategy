@@ -1,17 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_slave_client",
+  "name": "obj_bullet_slave",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Client",
-    "path": "folders/Objects/Client.yy",
+    "name": "Missiles",
+    "path": "folders/Objects/Missiles.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_friendly_fighter",
-    "path": "sprites/spr_friendly_fighter/spr_friendly_fighter.yy",
+    "name": "spr_bolt1",
+    "path": "sprites/spr_bolt1/spr_bolt1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

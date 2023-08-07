@@ -122,6 +122,7 @@
     {"name":"rm_planet_ground_old","order":2,"path":"rooms/rm_planet_ground_old/rm_planet_ground_old.yy",},
     {"name":"spr_player_ship","order":7,"path":"sprites/spr_player_ship/spr_player_ship.yy",},
     {"name":"rm_multiplayer","order":9,"path":"rooms/rm_multiplayer/rm_multiplayer.yy",},
+    {"name":"obj_bullet_slave","order":6,"path":"objects/obj_bullet_slave/obj_bullet_slave.yy",},
     {"name":"obj_player_client","order":5,"path":"objects/obj_player_client/obj_player_client.yy",},
     {"name":"obj_block_parent","order":5,"path":"objects/obj_block_parent/obj_block_parent.yy",},
     {"name":"spr_redblast","order":3,"path":"sprites/spr_redblast/spr_redblast.yy",},

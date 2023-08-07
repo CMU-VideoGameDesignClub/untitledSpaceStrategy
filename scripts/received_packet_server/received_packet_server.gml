@@ -53,10 +53,11 @@ function received_packet_server(buffer,socket){
 			var _player_x = buffer_read(buffer,buffer_u16)
 			var _player_y = buffer_read(buffer,buffer_u16)
 			
+			var _is_player = false
+			
 			// return instance id based off socket to player
 			var _player = ds_map_find_value(socket_to_instanceid,socket)
 			
-			// players x and y updated from read buffer
 			_player.shoot = _shoot;
 			
 			// USED TO SEND DATA TO All CLIENTS - repeat this for all actions
@@ -64,24 +65,36 @@ function received_packet_server(buffer,socket){
 			var _i = 0;
 			repeat(ds_list_size(socket_list))
 			{
+
 				// store iterated client into variable
 				var _sock = ds_list_find_value(socket_list,_i)
 				
-				// start at beginning of buffer
-				buffer_seek(server_buffer,buffer_seek_start,0);
+				// is it the current player?
+				if _sock = socket
+				{
+					var _is_player = true
+				}
+	
+				{
+					// start at beginning of buffer
+					buffer_seek(server_buffer,buffer_seek_start,0);
 				
-				// write to the buffer that we will be using "MOVE"
-				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.SHOOT);
+					// write to the buffer that we will be using "MOVE"
+					buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.SHOOT);
 				
-				// write to the buffer that this is for a specific client
-				buffer_write(server_buffer,buffer_u8,socket);
+					// write to the buffer that this is for a specific client
+					buffer_write(server_buffer,buffer_u8,socket);
+					
+					// is it the current client?
+					buffer_write(server_buffer,buffer_bool,_is_player);
 				
-				// write to the buffer the values of shoot and direction
-				buffer_write(server_buffer,buffer_bool,_shoot);
-				buffer_write(server_buffer,buffer_u16,_direction);
+					// write to the buffer the values of shoot and direction
+					buffer_write(server_buffer,buffer_bool,_shoot);
+					buffer_write(server_buffer,buffer_u16,_direction);
 				
-				// send a packet containing the buffer to the specified client
-				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+					// send a packet containing the buffer to the specified client
+					network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+				}
 				_i++
 			}
 			break;
@@ -96,6 +109,7 @@ function received_packet_server(buffer,socket){
 				with(_player)
 				{
 					motion_add(image_angle, .1)
+					
 				}
 			}
 			
@@ -140,6 +154,7 @@ function received_packet_server(buffer,socket){
 				_i++
 			}
 			break;
+			
 		case NETWORK_SERVER.LEFT:
 		
 			// set variables from of data sent by client
@@ -215,6 +230,67 @@ function received_packet_server(buffer,socket){
 				buffer_write(server_buffer,buffer_bool,_right);
 				
 				// send a packet containing the buffer to the specified client
+				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+				_i++
+			}
+			break;
+			
+		case NETWORK_SERVER.IS_DESTROYED:
+		
+			var _is_destroyed = buffer_read(buffer,buffer_bool)
+			var _player = ds_map_find_value(socket_to_instanceid,socket)
+			
+			if _is_destroyed == true
+			{
+				with(_player)
+				{
+					instance_destroy();
+				}
+			}
+			
+			var _i = 0;
+			repeat(ds_list_size(socket_list))
+			{
+				var _sock = ds_list_find_value(socket_list,_i)
+				buffer_seek(server_buffer,buffer_seek_start,0);
+				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.IS_DESTROYED);
+				buffer_write(server_buffer,buffer_u8,socket);
+				buffer_write(server_buffer,buffer_bool,_is_destroyed);
+				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+				_i++
+			}
+			break;
+			
+		case NETWORK_SERVER.SYNC:
+		
+			var _player_x = buffer_read(buffer,buffer_u16)
+			var _player_y = buffer_read(buffer,buffer_u16)
+			var _image_angle = buffer_read(buffer,buffer_u16)
+			var _direction = buffer_read(buffer,buffer_u16)
+			var _speed = buffer_read(buffer,buffer_u16)
+			var _player = ds_map_find_value(socket_to_instanceid,socket)
+			
+			with(_player)
+			{
+				_player.x = _player_x
+				_player.y = _player_y
+				_player.image_angle = _image_angle
+				_player.direction = _direction
+				_player.speed = _speed
+			}
+
+			var _i = 0;
+			repeat(ds_list_size(socket_list))
+			{
+				var _sock = ds_list_find_value(socket_list,_i)
+				buffer_seek(server_buffer,buffer_seek_start,0);
+				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.SYNC);
+				buffer_write(server_buffer,buffer_u8,socket);
+				buffer_write(server_buffer,buffer_u16,_player_x);
+				buffer_write(server_buffer,buffer_u16,_player_y);
+				buffer_write(server_buffer,buffer_u16,_image_angle);
+				buffer_write(server_buffer,buffer_u16,_direction);
+				buffer_write(server_buffer,buffer_u16,_speed);
 				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
 				_i++
 			}

@@ -85,6 +85,7 @@ function received_packet_client(buffer)
 		case NETWORK_CLIENT.SHOOT:
 			// read the buffer into a variable
 			var _sock = buffer_read(buffer,buffer_u8);
+			var _is_player = buffer_read(buffer,buffer_bool)
 			// read the buffer from server into a shoot and direction var for client 
 			var _shoot = buffer_read(buffer,buffer_bool);
 			var _direction = buffer_read(buffer,buffer_u16);
@@ -93,10 +94,20 @@ function received_packet_client(buffer)
 			// assign the x and y from the server to "this" player or slave
 			if _shoot == true
 			{
+				if _is_player
+				{
 					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet)){
 						direction = _direction;
 						image_angle = direction;
 					}
+				}
+				else
+				{	
+						with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet_slave)){
+						direction = _direction;
+						image_angle = direction;
+					}
+				}
 			}
 			break;
 			
@@ -155,6 +166,41 @@ function received_packet_client(buffer)
 					image_angle-=4
 				}
 			}
-			break;			
+			break;	
+			
+		case NETWORK_CLIENT.IS_DESTROYED:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _is_destroyed = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			if _is_destroyed == true
+			{
+				with(_player)
+				{
+					instance_destroy()
+					effect_create_above(ef_explosion, x, y, 1, c_orange);
+					audio_play_sound(snd_explosion1, 2, false);
+				}
+			}
+			break;
+			
+		case NETWORK_CLIENT.SYNC:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _player_x = buffer_read(buffer,buffer_u16)
+			var _player_y = buffer_read(buffer,buffer_u16)
+			var _image_angle = buffer_read(buffer,buffer_u16)
+			var _direction = buffer_read(buffer,buffer_u16)
+			var _speed = buffer_read(buffer,buffer_u16)
+			
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			
+			with(_player)
+			{
+				_player.x = _player_x
+				_player.y = _player_y
+				_player.image_angle = _image_angle
+				_player.direction = _direction
+				_player.speed = _speed
+			}
+			break;
 	}
 }

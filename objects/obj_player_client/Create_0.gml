@@ -9,8 +9,11 @@ space_brakes = false
 left_turn = false
 right_turn = false
 current_angle = 0
+sync_rate = 0;
 
 move_wrap(true, true, 0)
 
 displayX = 1920;
 displayY = 1080;
+
+is_destroyed = false;

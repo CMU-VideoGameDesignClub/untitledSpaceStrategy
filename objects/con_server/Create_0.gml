@@ -18,6 +18,8 @@ enum NETWORK_SERVER
 	STOP,
 	LEFT,
 	RIGHT,
+	IS_DESTROYED,
+	SYNC,
 }
 
 // arbitrary port number and max client

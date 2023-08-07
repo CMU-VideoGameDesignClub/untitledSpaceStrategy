@@ -19,6 +19,8 @@ enum NETWORK_CLIENT
 	STOP,
 	LEFT,
 	RIGHT,
+	IS_DESTROYED,
+	SYNC,
 	
 }
 // create new client socket using tcp protocol into variable client

@@ -156,6 +156,7 @@
     {"id":{"name":"rm_planet_ground_old","path":"rooms/rm_planet_ground_old/rm_planet_ground_old.yy",},},
     {"id":{"name":"spr_player_ship","path":"sprites/spr_player_ship/spr_player_ship.yy",},},
     {"id":{"name":"rm_multiplayer","path":"rooms/rm_multiplayer/rm_multiplayer.yy",},},
+    {"id":{"name":"obj_bullet_slave","path":"objects/obj_bullet_slave/obj_bullet_slave.yy",},},
     {"id":{"name":"obj_player_client","path":"objects/obj_player_client/obj_player_client.yy",},},
     {"id":{"name":"obj_block_parent","path":"objects/obj_block_parent/obj_block_parent.yy",},},
     {"id":{"name":"spr_redblast","path":"sprites/spr_redblast/spr_redblast.yy",},},
