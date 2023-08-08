@@ -70,7 +70,7 @@ function received_packet_server(buffer,socket){
 				var _sock = ds_list_find_value(socket_list,_i)
 				
 				// is it the current player?
-				if _sock = socket
+				if _sock == socket
 				{
 					var _is_player = true
 				}
@@ -244,7 +244,8 @@ function received_packet_server(buffer,socket){
 			{
 				with(_player)
 				{
-					instance_destroy();
+					// instance_destroy(); make invisible!
+					sprite_index = spr_null
 				}
 			}
 			
@@ -261,6 +262,33 @@ function received_packet_server(buffer,socket){
 			}
 			break;
 			
+		case NETWORK_SERVER.RESPAWN:
+		
+			var _respawn = buffer_read(buffer,buffer_bool)
+			var _player = ds_map_find_value(socket_to_instanceid,socket)
+			
+			if _respawn == true
+			{
+				with(_player)
+				{
+					// instance_destroy(); make invisible!
+					sprite_index = spr_player_ship
+				}
+			}
+			
+			var _i = 0;
+			repeat(ds_list_size(socket_list))
+			{
+				var _sock = ds_list_find_value(socket_list,_i)
+				buffer_seek(server_buffer,buffer_seek_start,0);
+				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.RESPAWN);
+				buffer_write(server_buffer,buffer_u8,socket);
+				buffer_write(server_buffer,buffer_bool,_respawn);
+				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
+				_i++
+			}
+			break;
+			
 		case NETWORK_SERVER.SYNC:
 		
 			var _player_x = buffer_read(buffer,buffer_u16)
@@ -268,7 +296,10 @@ function received_packet_server(buffer,socket){
 			var _image_angle = buffer_read(buffer,buffer_u16)
 			var _direction = buffer_read(buffer,buffer_u16)
 			var _speed = buffer_read(buffer,buffer_u16)
+			
 			var _player = ds_map_find_value(socket_to_instanceid,socket)
+			
+			// var _is_player = false
 			
 			with(_player)
 			{
@@ -282,7 +313,16 @@ function received_packet_server(buffer,socket){
 			var _i = 0;
 			repeat(ds_list_size(socket_list))
 			{
+				
 				var _sock = ds_list_find_value(socket_list,_i)
+				
+				/* slave only
+				if _sock == socket
+				{
+					var _is_player = true
+				}
+				*/
+				
 				buffer_seek(server_buffer,buffer_seek_start,0);
 				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER.SYNC);
 				buffer_write(server_buffer,buffer_u8,socket);
@@ -291,6 +331,7 @@ function received_packet_server(buffer,socket){
 				buffer_write(server_buffer,buffer_u16,_image_angle);
 				buffer_write(server_buffer,buffer_u16,_direction);
 				buffer_write(server_buffer,buffer_u16,_speed);
+				// buffer_write(server_buffer,buffer_bool,_is_player);
 				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
 				_i++
 			}

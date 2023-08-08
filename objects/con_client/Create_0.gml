@@ -20,6 +20,7 @@ enum NETWORK_CLIENT
 	LEFT,
 	RIGHT,
 	IS_DESTROYED,
+	RESPAWN,
 	SYNC,
 	
 }
@@ -31,3 +32,7 @@ network_connect(client, "127.0.0.1", 64198);
 client_buffer = buffer_create(1024, buffer_fixed,1);
 // variable that holds new Data Structure Map
 socket_to_instanceid = ds_map_create();
+
+playerSpawn_x = room_width/2;
+playerSpawn_y = room_height/2;
+

@@ -176,9 +176,26 @@ function received_packet_client(buffer)
 			{
 				with(_player)
 				{
-					instance_destroy()
+					// instance_destroy()
 					effect_create_above(ef_explosion, x, y, 1, c_orange);
 					audio_play_sound(snd_explosion1, 2, false);
+					sprite_index = spr_null
+				}
+			}
+			break;
+			
+		case NETWORK_CLIENT.RESPAWN:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _respawn = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			if _respawn == true
+			{
+				with(_player)
+				{
+					// instance_destroy(); make invisible!
+					effect_create_above(ef_ring, x, y, 1, c_orange);
+					audio_play_sound(snd_respawn, 2, false);
+					sprite_index = spr_player_ship
 				}
 			}
 			break;
@@ -191,15 +208,21 @@ function received_packet_client(buffer)
 			var _direction = buffer_read(buffer,buffer_u16)
 			var _speed = buffer_read(buffer,buffer_u16)
 			
+			// sync only slaves?
+			// var _is_player = buffer_read(buffer,buffer_bool) 
+			
 			_player = ds_map_find_value(socket_to_instanceid,_sock);
 			
-			with(_player)
+			// if _is_player == false
 			{
-				_player.x = _player_x
-				_player.y = _player_y
-				_player.image_angle = _image_angle
-				_player.direction = _direction
-				_player.speed = _speed
+				with(_player)
+				{
+					_player.x = _player_x
+					_player.y = _player_y
+					_player.image_angle = _image_angle
+					_player.direction = _direction
+					_player.speed = _speed
+				}
 			}
 			break;
 	}

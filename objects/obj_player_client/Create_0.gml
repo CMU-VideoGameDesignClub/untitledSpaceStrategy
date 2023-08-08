@@ -17,3 +17,4 @@ displayX = 1920;
 displayY = 1080;
 
 is_destroyed = false;
+respawn = false;
