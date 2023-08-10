@@ -111,6 +111,47 @@ function received_packet_client(buffer)
 			}
 			break;
 			
+		case NETWORK_CLIENT.POWER_SHOOT:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _is_player = buffer_read(buffer,buffer_bool)
+			var _shoot = buffer_read(buffer,buffer_bool);
+			var _direction = buffer_read(buffer,buffer_u16);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+			if _shoot == true
+			{
+				if _is_player
+				{
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet)){
+						direction = _direction;
+						image_angle = direction;
+					}
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet)){
+						direction = _direction-10;
+						image_angle = direction;
+					}
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet)){
+						direction = _direction+10;
+						image_angle = direction;
+					}
+				}
+				else
+				{	
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet_slave)){
+						direction = _direction;
+						image_angle = direction;
+					}
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet_slave)){
+						direction = _direction-10;
+						image_angle = direction;
+					}
+					with (instance_create_layer(_player.x, _player.y, "Instances", obj_bullet_slave)){
+						direction = _direction+10;
+						image_angle = direction;
+					}
+				}
+			}
+			break;	
+			
 		case NETWORK_CLIENT.FORWARD:
 			var _sock = buffer_read(buffer,buffer_u8);
 			var _forward = buffer_read(buffer,buffer_bool);
@@ -168,18 +209,25 @@ function received_packet_client(buffer)
 			}
 			break;	
 			
-		case NETWORK_CLIENT.IS_DESTROYED:
+		case NETWORK_CLIENT.DAMAGED:
 			var _sock = buffer_read(buffer,buffer_u8);
-			var _is_destroyed = buffer_read(buffer,buffer_bool);
+			var _damaged = buffer_read(buffer,buffer_bool);
 			_player = ds_map_find_value(socket_to_instanceid,_sock);
-			if _is_destroyed == true
-			{
+			if _damaged == true
+			{		
 				with(_player)
 				{
-					// instance_destroy()
-					effect_create_above(ef_explosion, x, y, 1, c_orange);
-					audio_play_sound(snd_explosion1, 2, false);
-					sprite_index = spr_null
+					if _player.shield 
+					{
+						shield = false;
+					}
+					else
+					{
+						effect_create_above(ef_explosion, x, y, 1, c_orange);
+						audio_play_sound(snd_explosion1, 2, false);
+						sprite_index = spr_null
+						three_shot = false;
+					}
 				}
 			}
 			break;
@@ -187,15 +235,30 @@ function received_packet_client(buffer)
 		case NETWORK_CLIENT.RESPAWN:
 			var _sock = buffer_read(buffer,buffer_u8);
 			var _respawn = buffer_read(buffer,buffer_bool);
+			var _is_player = buffer_read(buffer,buffer_bool);
 			_player = ds_map_find_value(socket_to_instanceid,_sock);
 			if _respawn == true
 			{
-				with(_player)
+				if _is_player
 				{
-					// instance_destroy(); make invisible!
-					effect_create_above(ef_ring, x, y, 1, c_orange);
-					audio_play_sound(snd_respawn, 2, false);
-					sprite_index = spr_player_ship
+					with(_player)
+					{
+						// instance_destroy(); make invisible!
+						effect_create_above(ef_ring, x, y, 1, c_green);
+						audio_play_sound(snd_respawn, 2, false);
+						sprite_index = spr_player_ship
+					}
+				}
+				
+				else
+				{
+					with(_player)
+					{
+						// instance_destroy(); make invisible!
+						effect_create_above(ef_ring, x, y, 1, c_green);
+						audio_play_sound(snd_respawn, 2, false);
+						sprite_index = spr_friendly_fighter
+					}
 				}
 			}
 			break;
@@ -223,6 +286,33 @@ function received_packet_client(buffer)
 					_player.direction = _direction
 					_player.speed = _speed
 				}
+			}
+			break;
+			
+		case NETWORK_CLIENT.UPGRADE_THREE_SHOT:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _is_player = buffer_read(buffer,buffer_bool)
+			var _pickup = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+
+			if _pickup
+			{
+				_player.three_shot = true
+				audio_play_sound(snd_power_up, 2, false)
+			}
+			break;
+			
+		case NETWORK_CLIENT.UPGRADE_SHIELD:
+			var _sock = buffer_read(buffer,buffer_u8);
+			var _pickup = buffer_read(buffer,buffer_bool)
+			var _is_player = buffer_read(buffer,buffer_bool);
+			_player = ds_map_find_value(socket_to_instanceid,_sock);
+
+			if _pickup
+			{
+				_player.shield = true
+				
+				audio_play_sound(snd_power_up, 2, false)
 			}
 			break;
 	}

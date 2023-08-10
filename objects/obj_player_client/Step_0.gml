@@ -21,3 +21,11 @@ if(sync_rate <= 0)
 	sync_rate = (5*room_speed);
 }
 	sync_rate -= 1;
+
+if shield
+{
+	with (instance_create_layer(x, y, "Instances", obj_shield)){
+		obj_shield.x = x;
+		obj_shield.y = y;
+	}
+}

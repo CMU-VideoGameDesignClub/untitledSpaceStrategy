@@ -1,16 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bullet_slave",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
-  ],
+  "name": "obj_shield",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Missiles",
-    "path": "folders/Objects/Missiles.yy",
+    "name": "Power Ups",
+    "path": "folders/Objects/Power Ups.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_redblast",
-    "path": "sprites/spr_redblast/spr_redblast.yy",
+    "name": "spr_shield",
+    "path": "sprites/spr_shield/spr_shield.yy",
   },
   "spriteMaskId": null,
   "visible": true,

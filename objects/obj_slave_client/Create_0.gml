@@ -4,4 +4,5 @@ direction = 0;
 speed = 0;
 
 shoot = false;
-is_destroyed = false
+damaged = false
+shield = false;

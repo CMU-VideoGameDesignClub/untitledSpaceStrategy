@@ -1,6 +1,6 @@
 // testing purposes
 window_set_fullscreen(false);
-window_set_size(1366,768)
+window_set_size(854,480)
 
 // play cool af music
 audio_stop_all()
@@ -15,13 +15,16 @@ enum NETWORK_CLIENT
 	PLAYER_DISCONNECT,
 	CHAT,
 	SHOOT,
+	POWER_SHOOT,
 	FORWARD,
 	STOP,
 	LEFT,
 	RIGHT,
-	IS_DESTROYED,
+	DAMAGED,
 	RESPAWN,
 	SYNC,
+	UPGRADE_THREE_SHOT,
+	UPGRADE_SHIELD,
 	
 }
 // create new client socket using tcp protocol into variable client

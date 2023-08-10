@@ -1,16 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bullet_slave",
+  "name": "obj_tri_shot_pu",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player_client","path":"objects/obj_player_client/obj_player_client.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_slave_client","path":"objects/obj_slave_client/obj_slave_client.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Missiles",
-    "path": "folders/Objects/Missiles.yy",
+    "name": "Power Ups",
+    "path": "folders/Objects/Power Ups.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_redblast",
-    "path": "sprites/spr_redblast/spr_redblast.yy",
+    "name": "spr_three_shot_pu",
+    "path": "sprites/spr_three_shot_pu/spr_three_shot_pu.yy",
   },
   "spriteMaskId": null,
   "visible": true,

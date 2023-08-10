@@ -16,5 +16,11 @@ move_wrap(true, true, 0)
 displayX = 1920;
 displayY = 1080;
 
-is_destroyed = false;
+damaged = false;
 respawn = false;
+
+points = 0;
+
+//power ups
+three_shot = false;
+shield = false
