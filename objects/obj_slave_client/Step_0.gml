@@ -7,3 +7,10 @@ if shield
 		obj_shield.y = y;
 	}
 }
+if shield == false
+{
+	if instance_exists(obj_shield)
+	{
+		instance_destroy(obj_shield)
+	}
+}

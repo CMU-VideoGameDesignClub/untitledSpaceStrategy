@@ -37,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_ship",
-    "path": "sprites/spr_player_ship/spr_player_ship.yy",
+    "name": "spr_friendly_fighter",
+    "path": "sprites/spr_friendly_fighter/spr_friendly_fighter.yy",
   },
   "spriteMaskId": null,
   "visible": true,

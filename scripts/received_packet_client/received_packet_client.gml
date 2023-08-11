@@ -217,16 +217,18 @@ function received_packet_client(buffer)
 			{		
 				with(_player)
 				{
-					if _player.shield 
+					if _player.shield == true
 					{
 						shield = false;
+						audio_play_sound(snd_shield_break,2,false)
 					}
-					else
+					if _player.shield == false
 					{
 						effect_create_above(ef_explosion, x, y, 1, c_orange);
 						audio_play_sound(snd_explosion1, 2, false);
 						sprite_index = spr_null
 						three_shot = false;
+						shield = false;
 					}
 				}
 			}
@@ -246,7 +248,7 @@ function received_packet_client(buffer)
 						// instance_destroy(); make invisible!
 						effect_create_above(ef_ring, x, y, 1, c_green);
 						audio_play_sound(snd_respawn, 2, false);
-						sprite_index = spr_player_ship
+						sprite_index = spr_friendly_fighter
 					}
 				}
 				
