@@ -1,7 +1,7 @@
 damaged = true
 con_client.alarm[0] = 400;
 
-instance_destroy()
+instance_destroy(other)
 
 buffer_seek(con_client.client_buffer,buffer_seek_start,0);
 buffer_write(con_client.client_buffer,buffer_u8,NETWORK_CLIENT.DAMAGED);

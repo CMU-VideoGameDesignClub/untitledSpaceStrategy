@@ -219,7 +219,6 @@ function received_packet_client(buffer)
 				{
 					if _player.shield == true
 					{
-						shield = false;
 						audio_play_sound(snd_shield_break,2,false)
 					}
 					if _player.shield == false
@@ -228,8 +227,8 @@ function received_packet_client(buffer)
 						audio_play_sound(snd_explosion1, 2, false);
 						sprite_index = spr_null
 						three_shot = false;
-						shield = false;
 					}
+					_player.shield = false;
 				}
 			}
 			break;

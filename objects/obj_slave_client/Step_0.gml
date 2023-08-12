@@ -7,10 +7,16 @@ if shield
 		obj_shield.y = y;
 	}
 }
-if shield == false
+if shield = true
 {
-	if instance_exists(obj_shield)
-	{
-		instance_destroy(obj_shield)
+	with (instance_create_layer(x, y, "Instances", obj_shield)){
+		obj_shield.x = x;
+		obj_shield.y = y;
+		
+		if obj_slave_client.damaged == true
+		{
+			instance_destroy(obj_shield)
+			shield = false
+		}
 	}
 }
