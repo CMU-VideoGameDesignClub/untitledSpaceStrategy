@@ -128,6 +128,7 @@
     {"name":"obj_worm_space_map","order":2,"path":"objects/obj_worm_space_map/obj_worm_space_map.yy",},
     {"name":"obj_planet_b","order":7,"path":"objects/obj_planet_b/obj_planet_b.yy",},
     {"name":"snd_scrap","order":8,"path":"sounds/snd_scrap/snd_scrap.yy",},
+    {"name":"obj_rock_server","order":1,"path":"objects/obj_rock_server/obj_rock_server.yy",},
     {"name":"rm_planet_ground_old","order":2,"path":"rooms/rm_planet_ground_old/rm_planet_ground_old.yy",},
     {"name":"spr_player_ship","order":7,"path":"sprites/spr_player_ship/spr_player_ship.yy",},
     {"name":"rm_multiplayer","order":9,"path":"rooms/rm_multiplayer/rm_multiplayer.yy",},

@@ -24,6 +24,7 @@ enum NETWORK_SERVER
 	SYNC,
 	UPGRADE_THREE_SHOT,
 	UPGRADE_SHIELD,
+	ROCK,
 }
 
 // arbitrary port number and max client

@@ -25,6 +25,7 @@ enum NETWORK_CLIENT
 	SYNC,
 	UPGRADE_THREE_SHOT,
 	UPGRADE_SHIELD,
+	ROCK,
 	
 }
 // create new client socket using tcp protocol into variable client

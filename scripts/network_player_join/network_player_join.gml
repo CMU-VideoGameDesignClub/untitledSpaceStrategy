@@ -2,6 +2,7 @@ var _username = argument0
 
 function network_player_join(_username){
 	// create a new player object in the room at specified posistion
+	
 	var _player = instance_create_depth(playerSpawn_x,playerSpawn_y, depth, obj_player_server)
 	_player.username = _username;
 		

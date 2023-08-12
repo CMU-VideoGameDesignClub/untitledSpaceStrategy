@@ -165,6 +165,7 @@
     {"id":{"name":"spr_stars_animated","path":"sprites/spr_stars_animated/spr_stars_animated.yy",},},
     {"id":{"name":"obj_planet_b","path":"objects/obj_planet_b/obj_planet_b.yy",},},
     {"id":{"name":"snd_scrap","path":"sounds/snd_scrap/snd_scrap.yy",},},
+    {"id":{"name":"obj_rock_server","path":"objects/obj_rock_server/obj_rock_server.yy",},},
     {"id":{"name":"rm_planet_ground_old","path":"rooms/rm_planet_ground_old/rm_planet_ground_old.yy",},},
     {"id":{"name":"spr_player_ship","path":"sprites/spr_player_ship/spr_player_ship.yy",},},
     {"id":{"name":"rm_multiplayer","path":"rooms/rm_multiplayer/rm_multiplayer.yy",},},

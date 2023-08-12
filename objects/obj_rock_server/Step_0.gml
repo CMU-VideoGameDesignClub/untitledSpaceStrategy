@@ -1,0 +1,22 @@
+move_wrap(true, true, 100);
+image_angle +=1;
+
+if (room == rm_server && global._sync_flag == true)
+{
+	var _i = 0;
+	repeat(ds_list_size(con_server.socket_list))
+	{
+		var _sock = ds_list_find_value(con_server.socket_list,_i)
+
+		buffer_seek(con_server.server_buffer,buffer_seek_start,0);
+		buffer_write(con_server.server_buffer,buffer_u8,NETWORK_CLIENT.ROCK);
+		buffer_write(con_server.server_buffer,buffer_u16,x);
+		buffer_write(con_server.server_buffer,buffer_u16,y);
+		buffer_write(con_server.server_buffer,buffer_u16,image_angle)
+		buffer_write(con_server.server_buffer,buffer_u16,direction);
+		buffer_write(con_server.server_buffer,buffer_u16,speed);
+		network_send_packet(_sock,con_server.server_buffer,buffer_tell(con_server.server_buffer))
+		_i++
+	}
+	global._sync_flag = false;
+}

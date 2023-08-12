@@ -316,5 +316,13 @@ function received_packet_client(buffer)
 				audio_play_sound(snd_power_up, 2, false)
 			}
 			break;
+			
+		case NETWORK_CLIENT.ROCK:
+			obj_rock_server.x = buffer_read(buffer,buffer_u16)
+			obj_rock_server.y = buffer_read(buffer,buffer_u16)
+			obj_rock_server.image_angle = buffer_read(buffer,buffer_u16)
+			obj_rock_server.direction = buffer_read(buffer,buffer_u16)
+			obj_rock_server.speed = buffer_read(buffer,buffer_u16)
+
 	}
 }

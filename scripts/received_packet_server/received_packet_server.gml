@@ -15,6 +15,7 @@ function received_packet_server(buffer,socket){
 			var _username = buffer_read(buffer,buffer_string);
 			
 			network_player_join(_username);
+			global._sync_flag = true;
 			
 			break;
 			
@@ -412,5 +413,9 @@ function received_packet_server(buffer,socket){
 				_i++
 			}
 			break;
+			
+		case NETWORK_SERVER.ROCK:
+			break;		
+		
 	}
 }
