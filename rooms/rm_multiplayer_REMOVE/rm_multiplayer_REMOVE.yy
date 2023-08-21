@@ -1,7 +1,7 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "rm_multiplayer",
+  "name": "rm_multiplayer_REMOVE",
   "creationCodeFile": "",
   "inheritCode": false,
   "inheritCreationOrder": false,

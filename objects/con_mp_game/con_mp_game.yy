@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Client",
-    "path": "folders/Objects/Client.yy",
+    "name": "net_space",
+    "path": "folders/Objects/Network/net_space.yy",
   },
   "parentObjectId": null,
   "persistent": true,
