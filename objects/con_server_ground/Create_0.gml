@@ -15,8 +15,8 @@ enum NETWORK_SERVER_G
 	CHAT,
 	SHOOT,
 	POWER_SHOOT,
-	FORWARD,
-	STOP,
+	//FORWARD,
+	//STOP,
 	LEFT,
 	RIGHT,
 	DAMAGED,
@@ -24,7 +24,8 @@ enum NETWORK_SERVER_G
 	SYNC,
 	UPGRADE_THREE_SHOT,
 	UPGRADE_SHIELD,
-	ROCK,
+	//ROCK,
+	JUMP,
 }
 
 // arbitrary port number and max client

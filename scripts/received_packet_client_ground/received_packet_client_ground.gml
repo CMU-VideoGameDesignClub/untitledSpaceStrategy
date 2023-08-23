@@ -152,37 +152,6 @@ function received_packet_client_ground(buffer)
 			}
 			break;	
 			
-		case NETWORK_CLIENT_G.FORWARD:
-			var _sock = buffer_read(buffer,buffer_u8);
-			var _forward = buffer_read(buffer,buffer_bool);
-			//var _direction = buffer_read(buffer,buffer_u16)
-			_player = ds_map_find_value(socket_to_instanceid,_sock);
-			
-			if _forward == true
-			{
-				with(_player)
-				{
-					motion_add(image_angle, .1)
-				}
-			}
-			break;
-			
-		case NETWORK_CLIENT_G.STOP:
-			var _sock = buffer_read(buffer,buffer_u8);
-			var _stop = buffer_read(buffer,buffer_bool);
-			_player = ds_map_find_value(socket_to_instanceid,_sock);
-			if _stop == true
-			{
-				with(_player)
-				{
-					if(speed > 0)
-					{
-						speed -= .35;
-					}
-				}
-			}
-			break;
-			
 		case NETWORK_CLIENT_G.LEFT:
 			var _sock = buffer_read(buffer,buffer_u8);
 			var _left = buffer_read(buffer,buffer_bool);
@@ -316,13 +285,5 @@ function received_packet_client_ground(buffer)
 				audio_play_sound(snd_power_up, 2, false)
 			}
 			break;
-			
-		case NETWORK_CLIENT_G.ROCK:
-			obj_rock_server.x = buffer_read(buffer,buffer_u16)
-			obj_rock_server.y = buffer_read(buffer,buffer_u16)
-			obj_rock_server.image_angle = buffer_read(buffer,buffer_u16)
-			obj_rock_server.direction = buffer_read(buffer,buffer_u16)
-			obj_rock_server.speed = buffer_read(buffer,buffer_u16)
-
 	}
 }

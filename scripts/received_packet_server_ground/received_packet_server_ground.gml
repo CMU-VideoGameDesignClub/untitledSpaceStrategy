@@ -135,63 +135,7 @@ function received_packet_server_ground(buffer,socket){
 				_i++
 			}
 			break;
-			
-		case NETWORK_SERVER_G.FORWARD:
 		
-			var _forward = buffer_read(buffer,buffer_bool)
-			var _player = ds_map_find_value(socket_to_instanceid,socket)
-			
-			if _forward == true
-			{
-				with(_player)
-				{
-					motion_add(image_angle, .1)
-					
-				}
-			}
-			
-			var _i = 0;
-			repeat(ds_list_size(socket_list))
-			{
-				var _sock = ds_list_find_value(socket_list,_i)
-				buffer_seek(server_buffer,buffer_seek_start,0);
-				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER_G.FORWARD);
-				buffer_write(server_buffer,buffer_u8,socket);
-				buffer_write(server_buffer,buffer_bool,_forward);
-				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
-				_i++
-			}
-			break;
-			
-		case NETWORK_SERVER_G.STOP:
-		
-			var _stop = buffer_read(buffer,buffer_bool)
-			var _player = ds_map_find_value(socket_to_instanceid,socket)
-			
-			if _stop == true
-			{
-				with(_player)
-				{
-					if(speed > 0)
-					{
-						speed -= .35;
-					}
-				}
-			}
-			
-			var _i = 0;
-			repeat(ds_list_size(socket_list))
-			{
-				var _sock = ds_list_find_value(socket_list,_i)
-				buffer_seek(server_buffer,buffer_seek_start,0);
-				buffer_write(server_buffer,buffer_u8,NETWORK_SERVER_G.STOP);
-				buffer_write(server_buffer,buffer_u8,socket);
-				buffer_write(server_buffer,buffer_bool,_stop);
-				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
-				_i++
-			}
-			break;
-			
 		case NETWORK_SERVER_G.LEFT:
 		
 			// set variables from of data sent by client
@@ -412,10 +356,7 @@ function received_packet_server_ground(buffer,socket){
 				network_send_packet(_sock,server_buffer,buffer_tell(server_buffer));
 				_i++
 			}
-			break;
-			
-		case NETWORK_SERVER_G.ROCK:
-			break;		
+			break;	
 		
 	}
 }

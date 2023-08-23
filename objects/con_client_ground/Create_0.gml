@@ -16,8 +16,8 @@ enum NETWORK_CLIENT_G
 	CHAT,
 	SHOOT,
 	POWER_SHOOT,
-	FORWARD,
-	STOP,
+	//FORWARD,
+	//STOP,
 	LEFT,
 	RIGHT,
 	DAMAGED,
@@ -25,8 +25,8 @@ enum NETWORK_CLIENT_G
 	SYNC,
 	UPGRADE_THREE_SHOT,
 	UPGRADE_SHIELD,
-	ROCK,
-	
+	//ROCK,
+	JUMP,
 }
 // create new client socket using tcp protocol into variable client
 client = network_create_socket(network_socket_tcp);
