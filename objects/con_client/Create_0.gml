@@ -31,7 +31,7 @@ enum NETWORK_CLIENT
 // create new client socket using tcp protocol into variable client
 client = network_create_socket(network_socket_tcp);
 // send client request to connect to our our server using a url(ip) and port 
-network_connect(client, "127.0.0.1", 64198);
+network_connect(client, "127.0.0.1", 64198); // greater than 1024
 // create buffer for the client at size 1MB
 client_buffer = buffer_create(1024, buffer_fixed,1);
 // variable that holds new Data Structure Map
