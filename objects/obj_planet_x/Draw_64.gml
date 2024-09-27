@@ -1,4 +1,4 @@
-if room == rm_start_screen || rm_start_screen2 
+if room == rm_mj168 || rm_start_screen2 
 {
 	exit;
 }

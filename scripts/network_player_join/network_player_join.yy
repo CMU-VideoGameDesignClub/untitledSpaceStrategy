@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "network_player_join",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Space",
-    "path": "folders/Scripts/Space.yy",
+  "$GMScript":"",
+  "%Name":"network_player_join",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"network_player_join",
+  "parent":{
+    "name":"Space",
+    "path":"folders/Scripts/Space.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
