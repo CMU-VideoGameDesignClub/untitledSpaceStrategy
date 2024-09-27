@@ -159,6 +159,7 @@
     {"id":{"name":"snd_laser_mj168","path":"sounds/snd_laser_mj168/snd_laser_mj168.yy",},},
     {"id":{"name":"snd_laser1","path":"sounds/snd_laser1/snd_laser1.yy",},},
     {"id":{"name":"snd_launch_mj168","path":"sounds/snd_launch_mj168/snd_launch_mj168.yy",},},
+    {"id":{"name":"snd_music_mj168","path":"sounds/snd_music_mj168/snd_music_mj168.yy",},},
     {"id":{"name":"snd_power_up","path":"sounds/snd_power_up/snd_power_up.yy",},},
     {"id":{"name":"snd_respawn","path":"sounds/snd_respawn/snd_respawn.yy",},},
     {"id":{"name":"snd_scrap_spend","path":"sounds/snd_scrap_spend/snd_scrap_spend.yy",},},

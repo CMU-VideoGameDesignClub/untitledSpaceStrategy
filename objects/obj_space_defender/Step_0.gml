@@ -14,11 +14,13 @@ if (abs(accumulatedMove) >= stepSize) {
     accumulatedMove = 0;  // Reset accumulated movement
 }
 
-// Shooting mechanic: Fire upwards
+// Randomized shooting mechanic
 if (fireCooldown > 0) {
     fireCooldown--; // Decrease cooldown until the next shot
 } else {
     // Create a projectile when cooldown reaches 0
     instance_create_layer(x, y - 10, "Instances", obj_bullet_mj168); // Shoots upwards (y-10)
-    fireCooldown = fireRate; // Reset the cooldown
+    
+    // Reset the fire cooldown with a random interval
+    fireCooldown = irandom_range(fireRate - 30, fireRate + 30); // Randomize cooldown slightly
 }

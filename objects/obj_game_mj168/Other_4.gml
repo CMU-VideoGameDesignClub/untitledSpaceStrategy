@@ -3,7 +3,7 @@ randomize();
 
 // Stop any currently playing audio and start background music
 audio_stop_all();
-audio_play_sound(snd_backgroundSound, 2, true); // Play background sound with looping
+audio_play_sound(snd_music_mj168, 2, true); // Play background sound with looping
 
 // Spawn the enemy ship at a specific position near the bottom of the room
 var enemy_x = room_width / 2; // Center horizontally

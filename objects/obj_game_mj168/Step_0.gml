@@ -11,7 +11,7 @@ if keyboard_check_pressed(vk_escape) {
 global.formationOffset = sin(degtorad(current_time / 2)) * formationJiggleAmplitude;
 
 // Slow left-to-right movement of the entire formation
-global.formationMoveOffset = sin(degtorad(current_time / 400)) * formationMoveAmplitude;
+global.formationMoveOffset = sin(degtorad(current_time / 100)) * formationMoveAmplitude;
 
 // Detect spacebar press to launch an alien
 if (keyboard_check_pressed(vk_space)) {

@@ -29,7 +29,7 @@ surface_resize(application_surface, displayX, displayY);
 formationJiggleSpeed = 0.2; // Speed of the subtle jiggle
 formationJiggleAmplitude = 5; // How much the aliens jiggle in place
 
-formationMoveSpeed = 16; // Speed of the left-to-right movement (slow)
+formationMoveSpeed = 4096; // Speed of the left-to-right movement (slow)
 formationMoveAmplitude = 300; // Distance the entire formation moves left and right
 
 global.formationOffset = 0; // Initial jiggle offset

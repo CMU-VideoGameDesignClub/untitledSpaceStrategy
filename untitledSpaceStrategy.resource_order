@@ -122,6 +122,7 @@
     {"name":"snd_laser_mj168","order":21,"path":"sounds/snd_laser_mj168/snd_laser_mj168.yy",},
     {"name":"snd_laser1","order":1,"path":"sounds/snd_laser1/snd_laser1.yy",},
     {"name":"snd_launch_mj168","order":19,"path":"sounds/snd_launch_mj168/snd_launch_mj168.yy",},
+    {"name":"snd_music_mj168","order":22,"path":"sounds/snd_music_mj168/snd_music_mj168.yy",},
     {"name":"snd_power_up","order":15,"path":"sounds/snd_power_up/snd_power_up.yy",},
     {"name":"snd_respawn","order":14,"path":"sounds/snd_respawn/snd_respawn.yy",},
     {"name":"snd_scrap_spend","order":9,"path":"sounds/snd_scrap_spend/snd_scrap_spend.yy",},
