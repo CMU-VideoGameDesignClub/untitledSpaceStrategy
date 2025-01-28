@@ -1,0 +1,26 @@
+/// Create Event
+server_address = "127.0.0.1"; // Replace with the host's IP on LAN
+client_socket = network_create_socket(network_socket_tcp);
+network_connect(client_socket, server_address, 6510);
+
+connected = false;
+
+/// Networking Event
+var event_type = async_load[? "type"];
+
+if (event_type == network_type_connect) {
+    connected = true;
+    show_debug_message("Connected to server!");
+} 
+else if (event_type == network_type_disconnect) {
+    connected = false;
+    show_debug_message("Disconnected from server!");
+} 
+else if (event_type == network_type_data) {
+    var buffer = async_load[? "buffer"];
+    var message = buffer_read(buffer, buffer_string);
+    buffer_delete(buffer);
+    show_debug_message("Message received: " + message);
+
+    // Process the message (e.g., update the game state)
+}
