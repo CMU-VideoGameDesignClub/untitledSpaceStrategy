@@ -1,0 +1,32 @@
+Host Server
+/// Create Event
+server_socket = network_create_server(network_socket_tcp, 6510, 4);
+if (server_socket < 0) {
+    show_error("Failed to create server. Port might be in use.", true);
+}
+connected_clients = [];
+
+/// Networking Event
+var event_type = async_load[? "type"];
+
+if (event_type == network_type_connect) {
+    var client_socket = async_load[? "socket"];
+    array_push(connected_clients, client_socket);
+    show_debug_message("Client connected: " + string(client_socket));
+} 
+else if (event_type == network_type_disconnect) {
+    var client_socket = async_load[? "socket"];
+    array_delete(connected_clients, array_index_of(connected_clients, client_socket));
+    show_debug_message("Client disconnected: " + string(client_socket));
+} 
+else if (event_type == network_type_data) {
+    var buffer = async_load[? "buffer"];
+    var message = buffer_read(buffer, buffer_string);
+    buffer_delete(buffer);
+    show_debug_message("Message received: " + message);
+
+    // Broadcast message to all clients
+    for (var i = 0; i < array_length(connected_clients); i++) {
+        network_send_packet(connected_clients[i], buffer_create_from_string(message), network_socket_tcp);
+    }
+}
